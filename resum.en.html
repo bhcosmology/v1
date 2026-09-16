@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>An Exploration of Black Hole Cosmology · The Black Hole Cosmology</title>
+<meta name="description" content="Black Hole Cosmology (BHC) is a family of theoretical proposals exploring the possibility that black holes generate new cosmological domains. Authors such as Popławski, Smolin,…">
+<link rel="canonical" href="resum.en.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23020204%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%229%22%20fill%3D%22none%22%20stroke%3D%22%23c8a15e%22%20stroke-width%3D%221.4%22%20opacity%3D%220.75%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%224.2%22%20fill%3D%22%23f2f0ec%22%2F%3E%3C%2Fsvg%3E">
+<meta name="author" content="Pau Padrós Montagut">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Black Hole Cosmology">
+<meta property="og:title" content="An Exploration of Black Hole Cosmology · The Black Hole Cosmology">
+<meta property="og:description" content="Black Hole Cosmology (BHC) is a family of theoretical proposals exploring the possibility that black holes generate new cosmological domains. Authors such as Popławski, Smolin,…">
+<meta property="og:image" content="og-image.png">
+<meta property="og:locale" content="en_GB">
+<link rel="alternate" hreflang="ca" href="resum.ca.html">
+<link rel="alternate" hreflang="es" href="resum.es.html">
+<link rel="alternate" hreflang="en" href="resum.en.html">
+<link rel="alternate" hreflang="x-default" href="resum.ca.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+:root{--bg:#020204;--ink:#f2f0ec;--gold:#c8a15e;--gold-soft:#c8a15e55;
+--t1:#e8e4dc;--t2:#c9c4bb;--t3:#b8b4ac;--t4:#9a958c;--t5:#8a857c;--t6:#7a766e;--t7:#6a665e;
+--surface:#08070c;--line:#141318;--line-2:#16151c}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+::selection{background:var(--gold);color:var(--bg)}
+.top{position:sticky;top:0;z-index:20;display:flex;gap:22px;align-items:center;flex-wrap:wrap;
+     padding:16px 6vw;background:#020204ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+     font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--t4)}
+.top a{text-decoration:none}.top a:hover{color:var(--ink)}
+.top .dot{width:8px;height:8px;border-radius:50%;background:var(--ink);box-shadow:0 0 12px 2px var(--gold-soft);display:inline-block}
+.langs{margin-left:auto;display:flex;gap:8px}
+.langs b{color:var(--ink);font-weight:600}
+main{max-width:74ch;margin:0 auto;padding:7vh 6vw 14vh}
+h1{font-weight:600;font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.06;letter-spacing:-.032em;margin:0 0 10px}
+.lead{font-family:'Newsreader',serif;font-weight:300;font-size:1.1rem;color:var(--t4);margin:0 0 6px}
+.badge{display:inline-block;margin:18px 0 0;padding:6px 13px;border:1px solid var(--line-2);border-radius:999px;
+       font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.2em;color:var(--t5)}
+.note{margin:14px 0 0;font-size:13px;color:var(--t5)}
+nav.toc{margin:44px 0 0;padding:22px 26px;border:1px solid var(--line-2);border-radius:14px;background:var(--surface)}
+nav.toc h2{margin:0 0 12px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--t5);font-weight:600}
+nav.toc ul{margin:0;padding-left:0;list-style:none;color:var(--t5)}
+nav.toc li::before{content:none}
+nav.toc li{margin:.36em 0;font-size:13.6px;line-height:1.35}
+nav.toc a{color:var(--t3);text-decoration:none}
+nav.toc a:hover{color:var(--gold)}
+.sec{scroll-margin-top:80px}
+.sec+.sec{margin-top:4.2em;padding-top:4.2em;border-top:1px solid var(--line)}
+h2{font-weight:600;font-size:clamp(1.42rem,2.5vw,1.96rem);letter-spacing:-.024em;line-height:1.16;margin:2.2em 0 1.1em;color:var(--ink)}
+h3{font-weight:600;font-size:1.19rem;letter-spacing:-.01em;margin:2.6em 0 1em;color:var(--ink);scroll-margin-top:80px}
+p{font-family:'Newsreader',serif;font-weight:300;font-size:1.18rem;line-height:1.78;color:var(--t2);margin:0 0 1.42em}
+p strong{color:var(--t1);font-weight:500}p em{color:var(--t1)}
+ul{padding-left:1.15em;list-style:none;margin:0 0 1.5em}
+li{font-family:'Newsreader',serif;font-weight:300;font-size:1.12rem;line-height:1.7;color:var(--t2);margin-bottom:.55em;position:relative}
+ul li::before{content:"—";position:absolute;left:-1.15em;color:var(--t6)}
+.eq{margin:1.8em 0;padding:18px 22px;background:var(--surface);border:1px solid #191822;border-left:2px solid var(--gold);border-radius:10px;overflow-x:auto;text-align:center}
+.eq.pending{text-align:left;border-left-color:#3a3630}
+.eq.pending code{font:500 13px/1.5 ui-monospace,Menlo,monospace;color:var(--t5)}
+.tablewrap{margin:2em 0;overflow-x:auto;border:1px solid #191822;border-radius:10px;background:var(--surface)}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;padding:12px 16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid #201f2a;white-space:nowrap}
+td{padding:11px 16px;font-size:13.4px;color:var(--t2);border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+mjx-container{color:var(--t1)!important}
+footer{border-top:1px solid var(--line);padding:34px 6vw;color:var(--t7);font-size:12.5px;text-align:center}
+@media print{.top,nav.toc{display:none}body{background:#fff;color:#000}p,li{color:#111}h1,h2,h3{color:#000}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a href="Home.dc.html"><span class="dot"></span></a>
+  <a href="Home.dc.html">Home</a>
+  <a href="Documents.dc.html?lang=en">Interactive reader</a>
+  <span class="langs"><a href="resum.ca.html">CA</a><span style="color:var(--t7)">·</span><a href="resum.es.html">ES</a><span style="color:var(--t7)">·</span><b>EN</b></span>
+</header>
+<main>
+  <h1>An Exploration of Black Hole Cosmology</h1>
+  <p class="lead">Theoretical framework summary · Pau Padrós Montagut · Treball de Recerca (Senior Thesis) — Catalonia, Spain, 2025–2026</p>
+  <div><span class="badge">WORKING DRAFT</span></div>
+  
+  <nav class="toc"><h2>Contents</h2><ul>
+<li><a href="#tesi-central">Central thesis</a></li>
+<li><a href="#fisica-establerta">The starting point: established physics</a></li>
+<li><a href="#precedents">Precedents and positioning</a></li>
+<li><a href="#fonaments-conceptuals">Conceptual foundations</a></li>
+<li><a href="#consequencies-cosmologiques">Cosmological consequences</a></li>
+<li><a href="#mecanisme-fisic">Physical mechanism</a></li>
+<li><a href="#parentesi-temporal">The temporal parenthesis model</a></li>
+<li><a href="#comptabilitat-entropica">Entropic accounting</a></li>
+<li><a href="#constant-cosmologica">The cosmological constant: two derivations and a wall</a></li>
+<li><a href="#resultats-genuins">Two genuine results</a></li>
+<li><a href="#signatures-observacionals">Observational signatures</a></li>
+<li><a href="#limitacions">Limitations and pending decisions</a></li>
+<li><a href="#estatus-epistemologic">Epistemological status and context</a></li>
+  </ul></nav>
+<section class="sec" id="tesi-central">
+<h2>Central thesis</h2>
+<p>Black Hole Cosmology (BHC) is a family of theoretical proposals exploring the possibility that black holes generate new cosmological domains. Authors such as Popławski, Smolin, Easson, and Brandenberger have proposed concrete mechanisms. This work situates itself in that field and develops a specific variant, starting from $\Lambda$CDM and general relativity and following them to their logical limits, without introducing new fields, particles, or free parameters.</p>
+<p>The central proposal is that the interior of every black hole constitutes a <strong>causally independent temporal domain</strong>: a spacetime with its own arrow of time, its own thermodynamic evolution, and its own final state. Under this reading, our universe originated inside a black hole formed in a parent universe, and every black hole formed in ours generates a child universe.</p>
+<p>The proposal is not that a black hole <em>is</em> a universe, but that one forms inside it: causally sealed off from ours, with its own independent time, expanding on the energy of the collapse that produced it. It lives, ages, and ends in a state of complete causal isolation — and that final state, seen from outside, is indistinguishable from what a black hole has always looked like.</p>
+<p>What distinguishes this variant from its neighbours is the <strong>kind</strong> of ingredient it adds. Smolin modifies the physical constants between generations; Popławski modifies the underlying theory of gravity by introducing Einstein-Cartan torsion. This framework does neither: its contributions are interpretive and conceptual, not modifications of the field equations or of the fundamental constants. That does not make it less speculative, but speculative in a different way, and it places its break with established physics at a very specific point: not in the equations, but in the reading of what causal separation means.</p>
+<p>It is therefore a conceptual and logical framework, not a complete physical theory. It has no mathematical formalism of its own, it cannot make quantitative predictions beyond the structural relations it derives, and its full formalization depends on a theory of quantum gravity that does not yet exist. What it can do, and what this summary documents, is follow established physics as far as it goes, mark precisely where it ends, and propose a coherent continuation from that point.</p>
+</section>
+<section class="sec" id="fisica-establerta">
+<h2>The starting point: established physics</h2>
+<p>The whole edifice rests on results that are not in dispute, and it is worth listing them because they mark which part of the framework is inheritance and which is contribution.</p>
+<p><strong>The commutation of Schwarzschild coordinates.</strong> Outside the event horizon, the radial coordinate $r$ is spacelike and the coordinate $t$ is timelike. Inside the horizon their roles are exchanged: the metric term associated with $r$ changes sign, and with it the causal character of the coordinate. Advance towards decreasing $r$ becomes as inevitable as advance towards the future is outside. This is neither a convention nor an artefact of coordinates, but a property of the metric's signature, and it is the established fact on which the entire reading of temporal orthogonality rests.</p>
+<p><strong>The singularity as the theory's limit.</strong> The Penrose-Hawking singularity theorems guarantee that generic gravitational collapse produces a singularity. But general relativity does not claim that anything physical diverges there: it claims that the theory has reached the limit of its domain of validity. The singularity is an indicator of incompleteness, not an answer — and it is precisely the space this framework occupies.</p>
+<p><strong>$\Lambda$CDM and the Friedmann equations.</strong> The standard cosmological model describes a universe that is flat, homogeneous, and isotropic on large scales, in accelerated expansion governed by a cosmological constant $\Lambda$ with equation of state $w = -1$. The Friedmann equations algebraically bind $\Lambda$, the Hubble parameter, the density, and the curvature — a relation that, as will be seen, ends up being the wall against which the quantitative part of this work collides.</p>
+<p><strong>Horizon thermodynamics.</strong> Bekenstein and Hawking established that a black hole has entropy proportional to the area of its horizon and emits thermal radiation at a temperature inversely proportional to its mass. Gibbons and Hawking showed that the cosmological horizon of a de Sitter space likewise emits thermal radiation, with an entropy also proportional to area. That <em>both</em> horizons are thermodynamic objects with well-defined entropy and temperature is the fact that makes the second annex's derivation of the cosmological constant possible.</p>
+<p><strong>The Page curve.</strong> Under conservation of information, the entropy of the radiation emitted by a black hole grows to a maximum around half its lifetime and then decreases to zero as evaporation completes, guaranteeing that all the information eventually emerges. The framework adopts this result to describe the rate at which information returns from child to parent.</p>
+</section>
+<section class="sec" id="precedents">
+<h2>Precedents and positioning</h2>
+<p>The work does not arise from nothing, and part of its task is to position itself precisely with respect to what already exists.</p>
+<p><strong>Smolin</strong> proposes a cosmological natural selection: each black hole generates a child universe with slightly mutated physical constants, and universes producing more black holes have more descendants, so that constants favouring structure come to dominate statistically. He arrives at a network of universes resembling this framework's, but by a different route and with two ingredients of his own: mutation and selection.</p>
+<p><strong>Popławski</strong> introduces Einstein-Cartan torsion as a mechanism for avoiding the singularity and generating the child's expansion. This is a modification of the underlying theory of gravity.</p>
+<p><strong>Susskind, Thorlacius, and Uglum</strong> formulated black hole complementarity: the external observer and the freely falling one have mutually exclusive but individually consistent descriptions of the same physics, and no physical operation can compare them because the horizon separates them. This principle is the framework's most important precedent, extending it from the observer-observer relation to the parent-child relation.</p>
+<p><strong>Loop quantum gravity and Gaztañaga's model</strong> propose bounces in which matter is compressed to a finite minimum and re-expands. They share with this framework the avoidance of the singularity through quantum effects at the Planck scale, but part company at a decisive point: in those models the manifold remains <em>continuous</em> through the bounce. This framework proposes that it breaks. Every subsequent difference — temporal orthogonality, causal disconnection, the erasure of Weyl — depends on that choice.</p>
+</section>
+<section class="sec" id="fonaments-conceptuals">
+<h2>Conceptual foundations</h2>
+<p><strong>Temporal orthogonality.</strong> The commutation of coordinates inside the horizon is interpreted as the geometric signature of a genuinely independent temporal axis. If the interior's obligatory temporal direction points towards decreasing values of a coordinate the parent perceives as spatial, then the child's temporal axis points towards where the parent sees space — which is, in the precise sense the framework gives the term, to be orthogonal to it. It must be said explicitly: the commutation is an established datum, but general relativity reads it as a phenomenon internal to a continuous manifold. Reading it as genuine orthogonality is a proposal of this work, not a consequence of the standard formalism.</p>
+<p><strong>De Sitter derivations.</strong> In a $\Lambda$-dominated universe, gravitationally bound systems are the only domains where time remains operationally defined. The causal boundary of a system of mass $M$ lies at</p>
+<div class="eq">$$r_c = \left(\frac{3GM}{\Lambda c^{2}}\right)^{1/3}$$</div>
+<p>Beyond it, causal disconnection is permanent and irreversible: no signal will ever cross again, in either direction.</p>
+<p><strong>Derealization and temporal islands.</strong> Here enters the interpretive step on which the rest depends. Permanent causal separation is understood not as a mere practical impossibility of communication, but as an <strong>ontological difference</strong>: what is causally real for one system may be causally non-existent for another, without either being mistaken. A constituent that passes beyond $r_c$ is <em>derealized</em>: it has not disappeared, but it has ceased to form part of the system's causal reality. What remains are <em>temporal islands</em>, the only places where time retains operational content, because time is defined relationally through the interactions between constituents.</p>
+<p><strong>Entropy at singularities.</strong> Boltzmann entropy is ill-defined at the extreme limits of curvature and of dispersion, where the number of microstates tends to infinity and the probability of a macrostate becomes observer-dependent. This observation prepares the relational reading of entropy the framework develops later.</p>
+<p><strong>Duality of contrary singularities.</strong> Infinite density (a curvature singularity) and zero density (the final de Sitter state) produce the same operational result: complete causal isolation, temporal termination, and thermal radiation. Opposite boundary conditions with equivalent physical consequences. This duality is not a decorative analogy: as will be seen, it leaves an exact numerical imprint on the relation between the cosmological constant and the parent's mass.</p>
+</section>
+<section class="sec" id="consequencies-cosmologiques">
+<h2>Cosmological consequences</h2>
+<p><strong>Emergent $w_{\text{eff}}$ and an effective Big Rip.</strong> Every finite bound system under $\Lambda$CDM loses mass monotonically: baryonic matter ends up converted into radiation, whether by proton decay or by the longer route of fusion up to iron and subsequent collapse, and the internal black holes evaporate. Since $r_c \propto M^{1/3}$, the causal boundary contracts, which derealizes new constituents, which reduces the mass further, which contracts the boundary further. This is positive feedback, and it is irreversible: there is no way to increase $M$ to compensate.</p>
+<p>The result is that the internal effective equation of state moves away from $w = -1$ without $\Lambda$ changing globally. It is not that dark energy grows; it is that the gravitational counterpart shrinks, and the same constant $\Lambda$ becomes proportionally dominant. From inside, the effect is operationally that of a Big Rip: all structure dissolves. The difference from the standard Big Rip is that here the tearing is causal rather than mechanical, and that it occurs asymptotically, not in finite time.</p>
+<p><strong>Cosmological network.</strong> Each black hole generates a temporal domain that evolves to complete disconnection and returns mass-energy to the parent as Hawking radiation: a network of universes connected by black holes, hierarchical and in principle unlimited in depth. The child's properties are determined by the parent's mass and spin at the moment of collapse. The framework is compatible both with a deterministic model, in which there is no variation between generations, and with a Smolinian one with mutation — and it acknowledges that distinguishing them is empirically impossible from within any universe of the network.</p>
+</section>
+<section class="sec" id="mecanisme-fisic">
+<h2>Physical mechanism</h2>
+<p><strong>The quantum bounce.</strong> When collapse reaches the Planck density regime, matter is not compressed to zero volume but bounces. The gravitational energy accumulated throughout the collapse does not disappear: it is released again as expansion. The child's Big Bang is not a mysterious initial condition but the consequence of energy conservation through the bounce. Since the compression is isotropic, the resulting expansion is too — which yields the cosmological principle for free.</p>
+<p><strong>The stalemate of infinities.</strong> The bounce explains how energy becomes expansion, but not why the child ends up causally disconnected. Here the framework proposes that, at the moment of the singularity, two tendencies diverge simultaneously: gravitational compression towards $r = 0$ and causal disconnection at the horizon. Neither can be resolved within the same manifold, and the tension is resolved by a phase transition: the manifold breaks and a new one is instantiated.</p>
+<p><strong>The topological foundation.</strong> This rupture is not a gratuitous postulate. Separating a manifold into two causally independent regions is a change in the topology of space, and <strong>Geroch's theorem</strong> (1967) establishes that, in classical and smooth general relativity, the topology of space cannot change. For it to change, one of its hypotheses must be violated, and there are only three doors: a singularity, closed timelike curves, or the loss of time-orientability. The latter two are severe causal pathologies. The first is precisely what gravitational collapse already produces generically. The framework takes this door, and the result is that the singularity ceases to be merely the end of collapsing matter: it becomes the topologically necessary point at which separation into two independent domains becomes possible.</p>
+<p>Recent work on regular black holes reinforces this reading: it has been shown that a de Sitter core and an asymptotically flat exterior region, joined within a single manifold, force the appearance of closed timelike curves, and that avoiding them requires admitting a change of topology. That configuration is essentially the framework's own.</p>
+<p><strong>Dimensional genesis.</strong> The rupture does not destroy dimensions: it separates them. The parent keeps its own; the child has its own, causally independent. Nothing is lost — what ceases to exist is the connection. An argument from symmetry holds that the rupture must affect the entire manifold and not selectively some coordinates, because a manifold is a unitary object and a partial rupture would demand an asymmetric treatment of the dimensions that no established principle justifies.</p>
+<p><strong>Single-impulse model.</strong> The child receives all its energy in a single event, the bounce. There is no continuous feeding and no persistent energetic connection. This explains why $\Lambda$ appears constant: the kick was punctual and has already completed, so no ongoing process can modify it. $\Lambda$ is not an abstract property of the vacuum, but the permanent residue of that impulse, expressed in the language of the Friedmann equations.</p>
+</section>
+<section class="sec" id="parentesi-temporal">
+<h2>The temporal parenthesis model</h2>
+<p>If the temporal axes of parent and child are independent, what exactly is the relation between them? It is a question every black hole cosmology framework ought to answer and that most sidestep. The work arrives at it by elimination, examining the three possible options.</p>
+<p><strong>Instant-by-instant correspondence</strong> is ruled out for two independent reasons. The first is scale: the child's lifetime along its own axis (between $10^{100}$ and magnitudes of order $10^{10^{76}}$ years, depending on whether the proton decays) and the black hole's evaporation time as measured by the parent (of order $10^{141}$ years for the mass the entropic relation assigns to our parent) maintain no physically natural proportionality; any conversion factor would be a fitting artefact. The second is more fundamental: already in standard physics, the finite proper time of infalling matter and the infinite coordinate time the external observer attributes to it show that there is no 1-1 correspondence between the two sides of the horizon, not even within a single manifold.</p>
+<p><strong>The variable dilation coefficient</strong> is ruled out because it is intrinsically <em>ad hoc</em> — an entire free function introduced by hand to make the scales match — because it presupposes a projection of one axis onto the other that the signature commutation does not permit, and because the intuition supporting it confuses two reference frames: that Hawking radiation accelerates towards the end is a fact about the horizon as seen from the parent, and implies nothing about the child's internal rate.</p>
+<p><strong>Strict orthogonality</strong> therefore remains as the only option introducing no unjustified structure. The child's entire lifetime corresponds, from the parent, to a single indeterminate instant: that of the black hole's formation. It is not that the child's time passes very fast or very slowly as seen from the parent; it is that the very category of “measured in units of the parent's time” does not apply.</p>
+<p>Once adopted, orthogonality proves fertile. <strong>It resolves the frozen star problem</strong>: the external observer sees matter frozen at the horizon precisely because the interior history does not elapse along their axis. The freezing is literally correct from the parent, and the complete life is literally correct from the child; they are not contradictory descriptions of one thing, but descriptions of two different axes. <strong>It dissolves the incompatibility of scales</strong> that made the other options untenable: asking which of the two times is longer ceases to make sense, just as it makes no sense to ask whether a horizontal distance is longer than a temporal interval.</p>
+<p><strong>And it explains the rate of information return.</strong> Under orthogonality, all the child's information is present at the boundary from the instant the parenthesis opens. Why, then, does it not return instantaneously? Because the rate is limited not by the availability of the information but by the thermodynamics of the horizon: the boundary radiates as a black body, and the Stefan-Boltzmann law imposes a ceiling on the emitted power. The Page curve determines the structure of the release; Stefan-Boltzmann determines its rate. Neither requires a common clock.</p>
+<p><strong>Nested parentheses.</strong> Matter a black hole accretes after forming does not enter the original child — by the time it arrives, that child has already completed its life along the orthogonal axis. Each accretion event opens its own independent parenthesis. A black hole is therefore a structure of nested parentheses, and its total evaporation time reflects the sum of all of them.</p>
+</section>
+<section class="sec" id="comptabilitat-entropica">
+<h2>Entropic accounting</h2>
+<p>If the child is born from a black hole of enormous entropy, how can it begin with low entropy without violating the second law? The framework's answer is that entropy is not a property of the particles but of the phase space of the manifold in which they exist, and that it therefore depends on the frame of description from which it is counted.</p>
+<p>The key distinction is between <strong>information</strong>, which is the invariant and is always conserved, and <strong>entropy</strong>, which is the part of the description relative to the causal frame. The child does not begin with objectively zero entropy in any absolute sense: it begins from the minimum of <em>its own</em> frame, in the same way that an observer opening their eyes on an already-dispersed gas takes that state as initial without denying that a more concentrated one existed before.</p>
+<p>There is, however, an important difference from that analogy, and it is what keeps the reading from being mere subjective entropy: in the gas case, the observer is ignorant of a state that exists in their own temporal frame and that they could have seen; in the child's case, the parent's state is inaccessible through <em>causal structure</em>, not through ignorance. The inaccessibility is structural, not epistemic.</p>
+<p>The Hawking mechanism itself supplies a consistency argument. If entropy were objectively destroyed at the rupture, the radiation returning to the parent would have to emerge stripped of the original information. But under the Page curve all the information eventually emerges — which confirms it was never destroyed: it was conserved as an invariant, while what differed between parent and child was only the entropy accessible from each frame.</p>
+<p>On the exact nature of the return, the framework stays honest: it is compatible with all three resolutions of the Hawking information problem — unitary preservation, thermalization, or reset through rupture — and adopts the first as a <em>working hypothesis</em>, as the only one compatible with the conservation of information it already assumes for independent reasons. Adopting it is not the same as demonstrating it.</p>
+</section>
+<section class="sec" id="constant-cosmologica">
+<h2>The cosmological constant: two derivations and a wall</h2>
+<p>The second annex attempts to connect the framework with one of the most enigmatic parameters in physics. The starting point is that the boundary between parent and child admits <em>two</em> thermodynamic descriptions — from the parent, the black hole's event horizon; from the child, the cosmological de Sitter horizon — and that the two can be connected.</p>
+<p><strong>Thermal route.</strong> Equating the Hawking and Gibbons-Hawking temperatures gives a relation with no free parameter:</p>
+<div class="eq">$$\Lambda_{\text{thermal}} = \frac{3c^{4}}{16\,G^{2}M^{2}}$$</div>
+<p>It is formally elegant and numerically close to the observed value, but it conceals a tension: equating temperatures presupposes thermal equilibrium between the two sides of the boundary, and the framework explicitly denies that equilibrium, because the temporal axes are not shared. One cannot equilibrate thermally along a time that is not common.</p>
+<p><strong>Entropic route.</strong> Replacing the equality of temperatures with the equality of entropies removes this assumption. Thermal equilibrium is a dynamical condition requiring contact; equality of entropies is a conservation condition requiring only that information be preserved — which the framework already adopts for independent reasons. From this:</p>
+<div class="eq">$$\Lambda_{\text{entropic}} = \frac{3c^{4}}{4\,G^{2}M^{2}}$$</div>
+<p>The functional form is the same; the coefficient differs by an exact factor of four. The difference is not an error: it is the square of the factor of two separating the surface gravities of the two horizons, and therefore <strong>the quantitative signature of the duality of contrary singularities</strong>. That the duality, introduced much earlier for purely conceptual reasons, reappears here as an exact numerical factor is one of the work's most solid results of internal coherence.</p>
+<p>The inverse dependence may seem counterintuitive — a more energetic kick ought to give a larger $\Lambda$ — but it is exactly what the duality predicts: more mass means a larger horizon, and a larger de Sitter horizon corresponds to a <em>smaller</em> cosmological constant. More massive black holes generate larger universes with lower background curvature.</p>
+<p><strong>The Friedmann wall.</strong> The third step is to check the relation's epistemological status, and here the limit appears. The Friedmann equations algebraically bind $\Lambda$ to $H_0$, to the density, and to the curvature. Any measurable global cosmological quantity — the mass of the observable universe, the density parameter, the age, the horizon size — contains $\Lambda$ implicitly. Feeding it into the relation to “predict” $\Lambda$ is therefore to recover what was already put in.</p>
+<p>The relation is therefore a <strong>consistency condition, not an independent prediction</strong>. The annex documents five attempted routes to finding a mass independent of $\Lambda$ and shows that all of them hit the same wall; getting past it would require new physics outside $\Lambda$CDM. It is worth underlining what survived and what did not: the calculation is correct and the derivation stands; what needed revising was its <em>interpretation</em>. Documenting that distinction, rather than concealing it, is part of the result.</p>
+</section>
+<section class="sec" id="resultats-genuins">
+<h2>Two genuine results</h2>
+<p>There are two contributions that do not depend on getting past the wall, and they are the ones the work defends with most confidence.</p>
+<p><strong>The horizon problem.</strong> Opposite regions of the sky that could never have been in causal contact share the same microwave background temperature to extraordinary precision. Standard cosmology resolves this with inflation. Here, if all the child's content comes from a single black hole of the parent and the state at the moment of rupture is unitary, homogeneity does not need explaining: it is inherited. Distant regions need not have exchanged information, because both come from the same origin. The resolution is robust because it depends neither on flatness nor on the value of $\Lambda$.</p>
+<p><strong>The low initial gravitational entropy.</strong> Penrose identified as a fundamental question why the early universe had such low gravitational entropy, as measured by the Weyl tensor. The framework offers a mechanism: the rupture breaks the geometric connection between parent and child, and the parent's free curvature — encoded in the Weyl tensor — does not cross the discontinuity, while the Ricci tensor, coupled to the matter-energy density, does carry the inherited content. The same caution as always is needed: the vanishing Weyl is a property of the description from the child, the minimum of its frame, not a claim that the child objectively has less gravitational entropy than the parent.</p>
+<p>It is worth noting that this second result is one of the few things the rupture offers and a continuous bounce does not: if the geometry remained continuous, there would be no discontinuity to explain the erasure.</p>
+</section>
+<section class="sec" id="signatures-observacionals">
+<h2>Observational signatures</h2>
+<p>The framework identifies four points where it differs from $\Lambda$CDM in a way that is, in principle, distinguishable. None constitutes a confirmation, but together they establish that the framework is not empirically empty.</p>
+<p><strong>Galactic rotation asymmetry.</strong> If the parent black hole's angular momentum is imprinted on the child's initial geometry, galactic rotation should show a preferred direction on cosmological scales — something $\Lambda$CDM has no mechanism to produce. Lior Shamir's analyses have identified a statistically significant asymmetry, but the data are contested: several independent analyses question whether the effect is physical or reflects systematic biases. It is presented as a consistent indication, not a confirmation.</p>
+<p><strong>Coincidence of radii.</strong> The Hubble radius and the Schwarzschild radius of the mass contained within the observable universe approximately coincide. This is an accepted numerical fact, which $\Lambda$CDM attributes to flatness. The framework gives it a structural origin: it is a manifestation of the identification $r_s = r_{dS}$ that runs through the whole work. With the same caution as the wall, though: it is a consistency, not a prediction of the value.</p>
+<p><strong>Correlation structure of Hawking radiation.</strong> If the framework is correct, the radiation encodes not merely the matter that fell in, but the child's complete history. Black holes of very different masses should have qualitatively different Page curves, not merely different timescales. Hawking radiation has never been detected from a real black hole, so the value of this point is theoretical rather than observational: it shows that the framework <em>does</em> make a differentiable prediction.</p>
+<p><strong>The horizon problem</strong>, already discussed, acts as a fourth signature of an explanatory character.</p>
+</section>
+<section class="sec" id="limitacions">
+<h2>Limitations and pending decisions</h2>
+<p>The annex devotes an entire chapter to criticizing the framework, and identifies <strong>two fundamental and independent limitations</strong>.</p>
+<p><strong>The first is quantitative: energy conservation across the rupture.</strong> Conservation is always a claim within a system possessing a temporal frame that allows two instants to be compared. Across the rupture there is no common frame, so the question “is the energy the parent loses equal to the energy the child gains?” cannot even be posed rigorously. It is not that the answer is negative: it is that the question is not well formed with current tools. Without this, the relation between $\Lambda$ and the parent's mass loses its foundation and the network ceases to be energetically closed in any precise sense.</p>
+<p><strong>The second is conceptual: the ontological reading of causal separation.</strong> That two systems separated by $r_{dS}$ can exchange no signal is an established fact. That this impossibility constitutes a difference in <em>what is real</em> for each of them, rather than a mere practical barrier, is an interpretive choice physics does not compel. But derealization, temporal islands, terminal de Sitter, and the duality of singularities all depend on it: if the alternative reading were correct, much of the edifice would lose its foundation.</p>
+<p>Other open problems include the three-body paradox in de Sitter space (which reveals the limits of the Newtonian binding criterion in marginal regimes), temporal synchronization between parent and child, the preservation of entanglement across the rupture, the minimum mass threshold for nested parentheses, and the origin of the specific value of $\Lambda$.</p>
+<p><strong>Flatness is not explained.</strong> The rupture preserves content but not geometry, and flatness ($\Omega \approx 1$) is precisely a tuning between density and expansion rate. It cannot be inherited. This is the structural price of the rupture, and it could be accommodated via inflation within the child, but it does not follow from the framework itself.</p>
+<p><strong>Rupture or continuous bounce.</strong> A structural decision therefore remains open. The rupture is what makes the framework distinctive — it gives meaning to the orthogonal axes and connects with the erasure of Weyl — but it forces flatness to be explained by an additional mechanism. A continuous bounce would allow flatness to be inherited, but would abandon the radicalism that gives the rest its meaning. The work does not disguise the fact that this choice is not yet settled.</p>
+</section>
+<section class="sec" id="estatus-epistemologic">
+<h2>Epistemological status and context</h2>
+<p>The framework is logically coherent, starts from well-founded premises, makes predictions that in principle distinguish it from standard physics, and identifies precisely the hypotheses on which it depends. What it cannot do, with current tools, is demonstrate them. Its honest situation is that of a complete and internally consistent conceptual edifice resting on pillars that only a theory of quantum gravity could secure.</p>
+<p>This honesty is, paradoxically, part of the argument. A framework that hid these dependencies, or presented them as derived consequences rather than interpretive choices, would be more vulnerable, because an examiner would find them anyway. A framework that points precisely to the two places where its viability rests offers the reader exactly what they need in order to evaluate it: not an assertion of certainty, but a map of where what can be grounded ends and what must be postulated begins.</p>
+<p>There is also an asymmetry worth acknowledging: the framework can pose questions standard physics cannot even formulate — such as that of entanglement across a rupture of the manifold — but it cannot answer them, precisely because answering them requires the physics that is still missing. This distance between the capacity to ask and the capacity to answer is not an accidental defect: it is the structural feature of a framework that reaches beyond what the current formalism can capture.</p>
+<p>The cosmological constant remains an open problem in physics. This framework does not resolve it from first principles, but it offers a new angle on why it is difficult and on what properties a theory resolving it would need to have.</p>
+<p>This research forms part of a Treball de Recerca (senior thesis) whose main body is developed in audiovisual format through interviews with specialists. The aim of contacting researchers is not to seek validation but critical scrutiny: to identify errors, weaknesses, and connections the author has not seen.</p>
+</section>
+
+</main>
+<footer>The Black Hole Cosmology — Pau Padrós Montagut</footer>
+</body>
+</html>

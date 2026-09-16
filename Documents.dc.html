@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<title>Els annexos — The Black Hole Cosmology</title>
+<meta name="description" content="Els dos annexos teòrics complets i un resum del marc: 45 seccions, 67 equacions i la derivació entròpica de la constant cosmològica. En català, castellà i anglès.">
+<link rel="canonical" href="Documents.dc.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23020204%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%229%22%20fill%3D%22none%22%20stroke%3D%22%23c8a15e%22%20stroke-width%3D%221.4%22%20opacity%3D%220.75%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%224.2%22%20fill%3D%22%23f2f0ec%22%2F%3E%3C%2Fsvg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Black Hole Cosmology">
+<meta property="og:title" content="Els annexos — The Black Hole Cosmology">
+<meta property="og:description" content="Els dos annexos teòrics complets i un resum del marc: 45 seccions, 67 equacions i la derivació entròpica de la constant cosmològica. En català, castellà i anglès.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Els annexos — The Black Hole Cosmology">
+<meta name="twitter:description" content="Els dos annexos teòrics complets i un resum del marc: 45 seccions, 67 equacions i la derivació entròpica de la constant cosmològica. En català, castellà i anglès.">
+<meta name="twitter:image" content="og-image.png">
+<meta name="author" content="Pau Padrós Montagut">
+<link rel="alternate" hreflang="ca" href="Documents.dc.html?lang=ca">
+<link rel="alternate" hreflang="es" href="Documents.dc.html?lang=es">
+<link rel="alternate" hreflang="en" href="Documents.dc.html?lang=en">
+<link rel="alternate" hreflang="x-default" href="Documents.dc.html">
+<meta name="bhc-page" content="docs">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./content.js?v=26"></script>
+<script src="./docs-data.js?v=9"></script>
+<script src="./docs-summary.js?v=5"></script>
+<script src="./docs-i18n.js?v=35"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]},svg:{fontCache:'global'},startup:{typeset:false}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+  :root{
+    --bg:#020204; --bg-90:#020204ee; --bg-80:#020204cc; --bg-0:#02020400;
+    --ink:#f2f0ec; --ink-hi:#ffffff;
+    --gold:#c8a15e; --gold-lt:#f2ddb0; --gold-glow:#c8a15eaa; --gold-soft:#c8a15e55;
+    --t1:#e8e4dc; --t2:#c9c4bb; --t2b:#c2bcb1; --t3:#b8b4ac; --t4:#9a958c; --t5:#8a857c; --t6:#7a766e; --t7:#6a665e;
+    --surface:#08070c; --surface-2:#050508; --hover:#0a0a10; --line:#141318; --line-2:#16151c;
+  }
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--gold);color:var(--bg)}
+  a{color:inherit;text-decoration:none}
+  .wordmark{white-space:nowrap}
+  nav div::-webkit-scrollbar{display:none}
+  @keyframes twinkle{0%,100%{opacity:var(--o,.4)}50%{opacity:calc(var(--o,.4)*.35)}}
+  mjx-container{color:var(--t1) !important}
+  mjx-container[display="true"]{margin:0 !important}
+
+  /* ── reading column ─────────────────────────────────────────── */
+  .doc-body{max-width:70ch}
+  .doc-body p{font-family:'Newsreader',serif;font-weight:300;font-size:1.19rem;line-height:1.8;color:var(--t2);margin:0 0 1.45em;letter-spacing:.004em}
+  .doc-body p strong{color:var(--t1);font-weight:500}
+  .doc-body p em{color:var(--t1);font-style:italic}
+  .doc-body h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.22rem;letter-spacing:-.01em;color:var(--ink);margin:2.9em 0 1.1em;scroll-margin-top:104px;position:relative}
+  .doc-body h3:first-child{margin-top:0}
+  .doc-body h3::before{content:"";position:absolute;left:-22px;top:.62em;width:9px;height:1px;background:var(--gold);opacity:.75}
+  .doc-body ul{margin:0 0 1.5em;padding-left:1.15em;list-style:none}
+  .doc-body li{font-family:'Newsreader',serif;font-weight:300;font-size:1.13rem;line-height:1.7;color:var(--t2);margin-bottom:.6em;position:relative}
+  .doc-body li::before{content:"—";position:absolute;left:-1.15em;color:var(--t6)}
+  .doc-body .eq{margin:1.9em 0;padding:20px 24px;background:var(--surface);border:1px solid #191822;border-left:2px solid var(--gold);border-radius:10px;overflow-x:auto;text-align:center}
+  .doc-body .eq.pending{text-align:left;border-left-color:#3a3630}
+  .doc-body .eq.pending code{font:500 13.5px/1.5 ui-monospace,Menlo,monospace;color:var(--t5);letter-spacing:.02em}
+  .doc-body .eq.pending .tagline{display:block;margin-top:9px;font:600 9.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--t7)}
+  .doc-body .tablewrap{margin:2em 0;overflow-x:auto;border:1px solid #191822;border-radius:10px;background:var(--surface)}
+  .doc-body table{width:100%;border-collapse:collapse;font-family:'Space Grotesk',sans-serif}
+  .doc-body th{text-align:left;padding:13px 18px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid #201f2a;white-space:nowrap;font-weight:600}
+  .doc-body td{padding:12px 18px;font-size:13.6px;color:var(--t2);border-bottom:1px solid var(--line);vertical-align:top}
+  .doc-body tr:last-child td{border-bottom:0}
+  .sec{scroll-margin-top:96px}
+  .sec + .sec{margin-top:4.6em;padding-top:4.6em;border-top:1px solid var(--line)}
+  .sec > h2{font-weight:600;font-size:clamp(1.5rem,2.5vw,2.05rem);letter-spacing:-.025em;line-height:1.15;margin:0 0 1.5em;color:var(--ink)}
+
+  /* ── permalinks per secció ─────────────────────────────────── */
+  .plink{margin-left:.45em;font-size:.62em;font-weight:500;color:var(--t6);opacity:0;transition:opacity .15s,color .15s;text-decoration:none;cursor:pointer;vertical-align:middle}
+  .sec > h2:hover .plink,.doc-body h3:hover .plink,.plink:focus{opacity:1}
+  .plink:hover{color:var(--gold)}
+  .plink.copied{opacity:1;color:var(--gold)}
+  @media (hover:none){ .plink{opacity:.45} }
+
+  /* ── sidebar ────────────────────────────────────────────────── */
+  .doccard{display:block;width:100%;text-align:left;padding:15px 16px;border-radius:11px;cursor:pointer;margin-bottom:8px;transition:background .2s,border-color .2s;font:inherit}
+  .toclink{display:block;padding:6px 0 6px 13px;font-size:12.9px;line-height:1.35;color:var(--t5);border-left:1px solid var(--line);transition:color .18s,border-color .18s;cursor:pointer;background:none;border-top:0;border-right:0;border-bottom:0;text-align:left;width:100%;font-family:inherit}
+  .toclink:hover{color:var(--t2)}
+  .toclink.on{color:var(--ink);border-left-color:var(--gold)}
+  .toclink.sub{padding-left:24px;font-size:12.2px;color:var(--t6)}
+  .toclink.sub:hover{color:var(--t3)}
+  #tocwrap{overflow-y:auto;max-height:calc(100vh - 250px);scrollbar-width:thin;scrollbar-color:#26242e transparent}
+  #tocwrap::-webkit-scrollbar{width:5px}
+  #tocwrap::-webkit-scrollbar-thumb{background:#26242e;border-radius:3px}
+
+  @media (max-width:1080px){
+    #docmain{grid-template-columns:1fr !important}
+    #docaside{position:static !important}
+    #tocwrap{max-height:none}
+  }
+</style>
+</helmet>
+
+<div id="pageStars" style="position:fixed;inset:0;z-index:0;pointer-events:none"></div>
+
+<!-- reading progress -->
+<div style="position:fixed;top:0;left:0;right:0;height:2px;z-index:60;background:transparent">
+  <div id="readbar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--gold-lt));transition:width .1s linear"></div>
+</div>
+
+<div style="position:relative;z-index:1;min-height:100vh">
+  <nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:22px 40px;backdrop-filter:blur(14px);background:var(--bg-90);border-bottom:1px solid var(--line)">
+    <a href="Home.dc.html" style="display:flex;align-items:baseline;gap:12px;flex:0 0 auto;margin-right:28px">
+      <span style="width:9px;height:9px;border-radius:50%;background:var(--ink);box-shadow:0 0 14px 2px var(--gold-glow);display:inline-block"></span>
+      <span style="font-weight:600;letter-spacing:.02em;font-size:15px" class="wordmark">The Black Hole Cosmology</span>
+    </a>
+    <div style="display:flex;align-items:center;gap:30px;min-width:0">
+      <div style="display:flex;gap:24px;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);white-space:nowrap;overflow-x:auto;min-width:0;scrollbar-width:none">
+        <a href="Home.dc.html" data-i18n-nav="overview" style-hover="color:var(--ink-hi)">Overview</a>
+        <a href="Videos.dc.html" data-i18n-nav="films" style-hover="color:var(--ink-hi)">Films</a>
+        <a href="Documents.dc.html" data-i18n-nav="docs" style="color:var(--ink)">Documents</a>
+        <a href="Glossary.dc.html" data-i18n-nav="glossary" style-hover="color:var(--ink-hi)">Glossary</a>
+        <a href="OpenProblems.dc.html" data-i18n-nav="problems" style-hover="color:var(--ink-hi)">Open problems</a>
+        <a href="Interviews.dc.html" data-i18n-nav="interviews" style-hover="color:var(--ink-hi)">Interviews</a>
+        <a href="Contact.dc.html" data-i18n-nav="contact" style-hover="color:var(--ink-hi)">Contact</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.1em">
+        <button data-lang-btn="ca" style="background:none;border:0;padding:0;font:inherit;font-size:12px;letter-spacing:.1em;color:var(--t5);cursor:pointer">CA</button>
+        <span style="color:var(--t7)">·</span>
+        <button data-lang-btn="es" style="background:none;border:0;padding:0;font:inherit;font-size:12px;letter-spacing:.1em;color:var(--t5);cursor:pointer">ES</button>
+        <span style="color:var(--t7)">·</span>
+        <button data-lang-btn="en" style="background:none;border:0;padding:0;font:inherit;font-size:12px;letter-spacing:.1em;color:var(--t5);cursor:pointer">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="docmain" style="max-width:1300px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:290px minmax(0,1fr);gap:64px;align-items:start">
+
+    <aside id="docaside" style="position:sticky;top:88px;padding:7vh 0 4vh">
+      <div data-i18n="docsEyebrow" style="font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--t5);margin-bottom:16px">The documents</div>
+      <div id="doclist"></div>
+      <div style="margin-top:26px;border-top:1px solid var(--line-2);padding-top:20px">
+        <div data-i18n="docsContents" style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--t5);margin-bottom:12px">Contents</div>
+        <div id="tocwrap"></div>
+      </div>
+    </aside>
+
+    <article style="padding:7vh 0 16vh;min-width:0">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;flex-wrap:wrap">
+        <span id="docTag" style="font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--t4)"></span>
+        <span style="width:5px;height:5px;border-radius:50%;background:var(--t7)"></span>
+        <span id="docStatus" style="font:600 11px/1 ui-monospace,Menlo,monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)"></span>
+      </div>
+      <h1 id="docTitle" style="margin:0;font-weight:600;font-size:clamp(2rem,3.8vw,3.2rem);line-height:1.05;letter-spacing:-.032em;max-width:20ch"></h1>
+      <p id="docAbstract" style="margin:20px 0 0;font-family:'Newsreader',serif;font-style:italic;font-weight:300;font-size:1.26rem;color:var(--t3);max-width:54ch;line-height:1.55"></p>
+      <div id="docNotice" style="display:none;margin-top:26px"></div>
+      <a id="docStatic" href="#" style="display:inline-block;margin-top:22px;font-size:13px;letter-spacing:.03em;color:var(--t5);border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .18s,border-color .18s" style-hover="color:var(--gold)"></a>
+      <div id="docBody" class="doc-body" style="margin-top:44px;border-top:1px solid var(--line-2);padding-top:40px"></div>
+    </article>
+  </main>
+
+  <footer style="border-top:1px solid var(--line);padding:40px;display:flex;justify-content:center;align-items:center;color:var(--t7);font-size:12.5px;letter-spacing:.04em">
+    <span data-i18n="footer">The Black Hole Cosmology — a speculative framework · Pau Padrós Montagut</span>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(p){
+    super(p);
+    this.docs = [
+      { key:'a1', tag:'Annex I',  gK:'doc1Tag', tK:'doc1Title', mK:'doc1Meta', aK:'doc1Abstract', hasText:true },
+      { key:'a2', tag:'Annex II', gK:'doc2Tag', tK:'doc2Title', mK:'doc2Meta', aK:'doc2Abstract', hasText:true },
+      { key:'a3', tag:'Resum',    gK:'doc3Tag', tK:'doc3Title', mK:'doc3Meta', hasText:true, isSummary:true },
+    ];
+    this.cur = 0;
+  }
+  componentDidMount(){
+    this.i18n();
+    this.makeStars();
+    this.buildAnchorIndex();
+    // un enllaç permanent (#id-de-secció) pot apuntar a qualsevol dels tres documents
+    const want = this.anchorFromHash();
+    if(want && this._anchors[want] !== undefined) this.cur = this._anchors[want];
+    this.render();
+    if(want) this.goTo(want, false);
+    this._onScroll = () => this.onScroll();
+    window.addEventListener('scroll', this._onScroll, { passive:true });
+    this._onHash = () => {
+      const id = this.anchorFromHash();
+      if(!id || this._anchors[id]===undefined) return;
+      if(this._anchors[id] !== this.cur){ this.cur = this._anchors[id]; this.render(); }
+      this.goTo(id, false);
+    };
+    window.addEventListener('hashchange', this._onHash);
+  }
+  componentWillUnmount(){
+    if(this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if(this._onHash) window.removeEventListener('hashchange', this._onHash);
+  }
+  anchorFromHash(){
+    try { return decodeURIComponent(String(location.hash||'').replace(/^#/,'')) || null; }
+    catch(e){ return null; }
+  }
+  // id d'àncora -> índex del document que la conté (les 188 són úniques)
+  buildAnchorIndex(){
+    const map = {};
+    this.docs.forEach((doc,i)=>{
+      const data = doc.isSummary
+        ? ((window.BHC_SUMMARY||{}).ca)
+        : (window.BHC_DOCS||{})[doc.key];
+      if(!data || !data.sections) return;
+      data.sections.forEach(s=>{
+        if(s.id) map[s.id]=i;
+        (s.blocks||[]).forEach(b=>{ if(b.t==='h' && b.id) map[b.id]=i; });
+      });
+    });
+    this._anchors = map;
+  }
+  setHash(id){
+    if(!id || this._lastHash===id) return;
+    this._lastHash = id;
+    try { history.replaceState(null,'','#'+encodeURIComponent(id)); } catch(e){}
+  }
+  i18n(){ if(!window.BHC_applyI18n) return; window.BHC_applyI18n(); requestAnimationFrame(()=>window.BHC_applyI18n()); }
+  makeStars(){
+    const sl=document.getElementById('pageStars'); if(!sl||sl.children.length) return;
+    let h='';
+    for(let i=0;i<40;i++){
+      const x=(Math.random()*100).toFixed(2), y=(Math.random()*100).toFixed(2);
+      const s=(Math.random()*0.9+0.5).toFixed(2);
+      const o=(Math.random()*0.22+0.12).toFixed(2);
+      const d=(Math.random()*6+5).toFixed(2), dl=(Math.random()*8).toFixed(2);
+      h+='<span style="position:absolute;left:'+x+'%;top:'+y+'%;width:'+s+'px;height:'+s+'px;border-radius:50%;background:#f4f1ea;--o:'+o+';opacity:'+o+';box-shadow:0 0 3px 0 #f4f1ea44;animation:twinkle '+d+'s ease-in-out '+dl+'s infinite"></span>';
+    }
+    sl.innerHTML=h;
+  }
+  T(k){ return window.t ? window.t(k) : ''; }
+  esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  select(i){
+    if(i===this.cur) return;
+    this.cur=i; this._lastHash=null;
+    try { history.replaceState(null,'',location.pathname+location.search); } catch(e){}
+    this.render(); window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  render(){
+    const d = this.docs[this.cur];
+    const T = k=>this.T(k);
+    // the summary exists in all three languages; the annexes are Catalan only
+    const lang = window.BHC_LANG || 'en';
+    const summary = d.isSummary ? ((window.BHC_SUMMARY||{})[lang] || (window.BHC_SUMMARY||{}).ca) : null;
+    const data = d.isSummary ? summary : (window.BHC_DOCS||{})[d.key];
+
+    // ── document switcher ──
+    const list = document.getElementById('doclist');
+    list.innerHTML = '';
+    this.docs.forEach((doc,i)=>{
+      const on = i===this.cur;
+      const b=document.createElement('button');
+      b.className='doccard';
+      b.style.cssText += on
+        ? 'background:#0d0c13;border:1px solid #2a2833;'
+        : 'background:transparent;border:1px solid var(--line-2);';
+      b.innerHTML =
+        '<div style="font:600 10.5px/1 ui-monospace,Menlo,monospace;color:'+(on?'var(--gold)':'var(--t6)')+';margin-bottom:8px;letter-spacing:.12em">'+this.esc(T(doc.gK)||doc.tag).toUpperCase()+'</div>'
+        + '<div style="font-weight:600;font-size:15px;letter-spacing:-.01em;color:'+(on?'var(--ink)':'#a8a49b')+'">'+this.esc(T(doc.tK)||doc.tag)+'</div>'
+        + '<div style="margin-top:5px;font-size:12.2px;color:var(--t6);line-height:1.35">'+this.esc(T(doc.mK))+'</div>';
+      b.addEventListener('click',()=>this.select(i));
+      list.appendChild(b);
+    });
+
+    // ── header ──
+    document.getElementById('docTag').textContent = T(d.gK)||d.tag;
+    document.getElementById('docTitle').textContent = summary ? summary.title : (T(d.tK)||d.tag);
+    document.getElementById('docStatus').textContent = d.hasText ? T('draftLabel') : T('notPublished');
+    document.getElementById('docAbstract').textContent = summary ? summary.lead
+      : (d.hasText ? (T(d.aK) || T('docsDraftNote')) : T('docsSoon'));
+
+    // enllaç a la versió estàtica: la que llegeixen els cercadors i la que es pot imprimir
+    const st = document.getElementById('docStatic');
+    if(st){
+      const slug = {a1:'annex-1', a2:'annex-2', a3:'resum'}[d.key];
+      if(slug && d.hasText){
+        st.style.display='inline-block';
+        st.href = slug+'.'+lang+'.html';
+        st.textContent = (T('readStatic')||'Full text on one page')+' →';
+      } else st.style.display='none';
+    }
+
+    // ── translation notice (the summary is fully translated, so it never needs one) ──
+    const notice = document.getElementById('docNotice');
+    const trAll = (!d.isSummary && lang!=='ca')
+      ? (((window.BHC_DOCS_I18N||{})[d.key]||{})[lang]||{}) : {};
+    const nDone = Object.keys(trAll).length;
+    const nTotal = (data && data.sections) ? data.sections.length : 0;
+    if(d.hasText && !d.isSummary && lang!=='ca'){
+      notice.style.display='block';
+      const msg = nDone===0 ? T('docsLangNotice')
+                : (nDone>=nTotal ? '' : T('docsPartial').replace('{done}',nDone).replace('{total}',nTotal));
+      if(!msg){ notice.style.display='none'; }
+      else {
+        notice.innerHTML='<div style="display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border:1px solid var(--line-2);border-radius:999px;font-size:12.5px;color:var(--t4)">'
+          +'<span style="width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block"></span>'
+          +'<span>'+this.esc(msg)+'</span></div>';
+      }
+    } else notice.style.display='none';
+
+    // ── body ──
+    const body = document.getElementById('docBody');
+    if(!d.hasText || !data){
+      body.innerHTML = '<p><em>'+this.esc(T('placeholderNote'))+'</em></p>';
+      document.getElementById('tocwrap').innerHTML='';
+      this.typeset();
+      return;
+    }
+    // translations for this document, if any (Catalan is the source)
+    const tr = (!d.isSummary && lang!=='ca')
+      ? (((window.BHC_DOCS_I18N||{})[d.key]||{})[lang]||{}) : {};
+    this._tr = tr;
+
+    let html='';
+    data.sections.forEach(s=>{
+      const ts = tr[s.id];                     // translated section, or undefined
+      const tb = (ts && ts.blocks) || {};
+      const plink = id => '<a class="plink" data-plink="'+this.esc(id)+'" href="#'+encodeURIComponent(id)+'" title="'+this.esc(T('copyLink')||'Copy link to this section')+'">#</a>';
+      html += '<section class="sec" id="'+s.id+'"><h2>'+this.esc((ts&&ts.title)||s.title)+plink(s.id)+'</h2>';
+      s.blocks.forEach((b,bi)=>{
+        const t = tb[bi];                      // translated text for this block
+        if(b.t==='p') html += '<p>'+(t||b.html)+'</p>';
+        else if(b.t==='h') html += '<h3 id="'+(b.id||'')+'">'+this.esc(t||b.text)+(b.id?plink(b.id):'')+'</h3>';
+        else if(b.t==='ul') html += '<ul>'+(t||b.items).map(x=>'<li>'+x+'</li>').join('')+'</ul>';
+        else if(b.t==='table'){
+          html += '<div class="tablewrap"><table>'
+            + b.rows.map((r,ri)=>'<tr>'+r.map(c=>{
+                const cell=this.esc(c);
+                return ri===0 ? '<th>'+cell+'</th>' : '<td>'+cell+'</td>';
+              }).join('')+'</tr>').join('')
+            + '</table></div>';
+        }
+        else if(b.t==='eq'){
+          html += b.tex
+            ? '<div class="eq">$$'+b.tex+'$$</div>'
+            : '<div class="eq pending"><code>'+this.esc(b.raw)+'</code><span class="tagline">'+this.esc(T('eqPending'))+'</span></div>';
+        }
+      });
+      html += '</section>';
+    });
+    body.innerHTML = html;
+
+    // els botons «#» copien l'enllaç permanent en comptes de saltar-hi
+    body.querySelectorAll('.plink').forEach(a=>{
+      a.addEventListener('click',ev=>{ ev.preventDefault(); this.copyLink(a.dataset.plink, a); });
+    });
+
+    // ── table of contents ──
+    const toc = document.getElementById('tocwrap');
+    toc.innerHTML='';
+    data.sections.forEach(s=>{
+      const ts = (this._tr||{})[s.id];
+      const tb = (ts && ts.blocks) || {};
+      const a=document.createElement('button');
+      a.className='toclink'; a.dataset.target=s.id; a.textContent=(ts&&ts.title)||s.title;
+      a.addEventListener('click',()=>this.goTo(s.id));
+      toc.appendChild(a);
+      s.blocks.forEach((b,bi)=>{
+        if(b.t!=='h' || !b.id) return;
+        const sub=document.createElement('button');
+        sub.className='toclink sub'; sub.dataset.target=b.id; sub.textContent=tb[bi]||b.text;
+        sub.addEventListener('click',()=>this.goTo(b.id));
+        toc.appendChild(sub);
+      });
+    });
+
+    this.typeset();
+    this.onScroll();
+  }
+
+  goTo(id, smooth){
+    const el=document.getElementById(id);
+    if(!el){ // el cos encara no s'ha pintat: reintenta un cop
+      if(smooth!==false) return;
+      setTimeout(()=>{ const e2=document.getElementById(id);
+        if(e2) window.scrollTo({top:e2.getBoundingClientRect().top+window.scrollY-92}); },120);
+      return;
+    }
+    window.scrollTo({top: el.getBoundingClientRect().top+window.scrollY-92,
+                     behavior: smooth===false ? 'auto' : 'smooth'});
+    this.setHash(id);
+  }
+  // copia l'enllaç permanent al porta-retalls i deixa marca visual
+  copyLink(id, node){
+    this.setHash(id);
+    const url = location.href;
+    const done = () => {
+      if(!node) return;
+      const old = node.textContent; node.textContent='✓'; node.classList.add('copied');
+      setTimeout(()=>{ node.textContent=old; node.classList.remove('copied'); },1200);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(done, done);
+    } else done();
+  }
+
+  onScroll(){
+    // reading progress
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    const bar=document.getElementById('readbar');
+    if(bar) bar.style.width = (max>0 ? Math.min(100,(h.scrollTop/max)*100) : 0)+'%';
+
+    // scroll-spy on the TOC
+    const links=[...document.querySelectorAll('.toclink')];
+    if(!links.length) return;
+    let best=null, bestTop=-1e9;
+    links.forEach(l=>{
+      const el=document.getElementById(l.dataset.target); if(!el) return;
+      const top=el.getBoundingClientRect().top-120;
+      if(top<=0 && top>bestTop){ bestTop=top; best=l; }
+    });
+    links.forEach(l=>l.classList.toggle('on', l===best));
+    if(best && this._lastSpy!==best){
+      this._lastSpy=best;
+      // la URL segueix la lectura, així es pot copiar de la barra en qualsevol moment
+      this.setHash(best.dataset.target);
+      const w=document.getElementById('tocwrap');
+      const lt=best.offsetTop-w.offsetTop;
+      if(lt<w.scrollTop || lt>w.scrollTop+w.clientHeight-40) w.scrollTop=lt-w.clientHeight/2;
+    }
+  }
+
+  typeset(){
+    const run=()=>{
+      if(window.MathJax && window.MathJax.typesetPromise){
+        const el=document.getElementById('docBody');
+        window.MathJax.typesetClear && window.MathJax.typesetClear();
+        window.MathJax.typesetPromise(el?[el]:undefined).catch(()=>{});
+      } else setTimeout(run,250);
+    };
+    setTimeout(run,60);
+  }
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

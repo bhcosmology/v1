@@ -1,0 +1,6 @@
+# The Black Hole Cosmology
+User-agent: *
+Allow: /
+Disallow: /uploads/
+
+Sitemap: sitemap.xml
