@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>Home.dc.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="Home.dc.html?lang=ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="Home.dc.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="Home.dc.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="Home.dc.html"/>
+  </url>
+  <url>
+    <loc>Documents.dc.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="Documents.dc.html?lang=ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="Documents.dc.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="Documents.dc.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="Documents.dc.html"/>
+  </url>
+  <url>
+    <loc>Glossary.dc.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="Glossary.dc.html?lang=ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="Glossary.dc.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="Glossary.dc.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="Glossary.dc.html"/>
+  </url>
+  <url>
+    <loc>OpenProblems.dc.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="OpenProblems.dc.html?lang=ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="OpenProblems.dc.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="OpenProblems.dc.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="OpenProblems.dc.html"/>
+  </url>
+  <url>
+    <loc>Videos.dc.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="Videos.dc.html?lang=ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="Videos.dc.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="Videos.dc.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="Videos.dc.html"/>
+  </url>
+  <url>
+    <loc>Interviews.dc.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="Interviews.dc.html?lang=ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="Interviews.dc.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="Interviews.dc.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="Interviews.dc.html"/>
+  </url>
+  <url>
+    <loc>Contact.dc.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="Contact.dc.html?lang=ca"/>
+    <xhtml:link rel="alternate" hreflang="es" href="Contact.dc.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="Contact.dc.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="Contact.dc.html"/>
+  </url>
+  <url>
+    <loc>annex-1.ca.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="annex-1.ca.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="annex-1.es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="annex-1.en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="annex-1.ca.html"/>
+  </url>
+  <url>
+    <loc>annex-1.es.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="annex-1.ca.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="annex-1.es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="annex-1.en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="annex-1.ca.html"/>
+  </url>
+  <url>
+    <loc>annex-1.en.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="annex-1.ca.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="annex-1.es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="annex-1.en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="annex-1.ca.html"/>
+  </url>
+  <url>
+    <loc>annex-2.ca.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="annex-2.ca.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="annex-2.es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="annex-2.en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="annex-2.ca.html"/>
+  </url>
+  <url>
+    <loc>annex-2.es.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="annex-2.ca.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="annex-2.es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="annex-2.en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="annex-2.ca.html"/>
+  </url>
+  <url>
+    <loc>annex-2.en.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="annex-2.ca.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="annex-2.es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="annex-2.en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="annex-2.ca.html"/>
+  </url>
+  <url>
+    <loc>resum.ca.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="resum.ca.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="resum.es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="resum.en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="resum.ca.html"/>
+  </url>
+  <url>
+    <loc>resum.es.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="resum.ca.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="resum.es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="resum.en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="resum.ca.html"/>
+  </url>
+  <url>
+    <loc>resum.en.html</loc>
+    <lastmod>2026-09-01</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="resum.ca.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="resum.es.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="resum.en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="resum.ca.html"/>
+  </url>
+</urlset>

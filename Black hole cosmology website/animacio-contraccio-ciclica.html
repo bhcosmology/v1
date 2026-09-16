@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<title>contracció cíclica — 1920×1080</title>
+<style>
+  html,body{margin:0;height:100%;background:#0D0D0F;overflow:hidden}
+  #escenari{position:absolute;left:50%;top:50%;transform-origin:50% 50%}
+  svg{display:block}
+</style>
+</head>
+<body>
+<div id="escenari"><svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg></div>
+
+<script>
+/* ==================================================================
+   PARÀMETRES  —  canvia només aquest bloc
+   ================================================================== */
+const P = {
+
+  /* ---- llenç ---- */
+  AMPLADA: 1920,
+  ALCADA : 1080,
+
+  /* ---- colors ---- */
+  COLOR_FONS          : '#0D0D0F',
+  COLOR_ACTIU         : '#C9A227',   // contorn, punts vius, etiqueta r_c
+  COLOR_APAGAT        : '#3A3A3A',   // punts que han quedat fora
+  COLOR_ETIQUETA_CICLE: '#8A8A8A',
+
+  /* ---- cercle ---- */
+  CENTRE_X      : 0.40,   // fracció de l'amplada
+  CENTRE_Y      : 0.50,   // fracció de l'alçada
+  GRUIX_CONTORN : 1.5,    // px
+  // diàmetres en px: [inici, fi cicle 1, fi cicle 2, fi cicle 3, fi cicle 4]
+  DIAMETRES     : [600, 464, 352, 256, 176],
+
+  /* ---- temps (segons) ---- */
+  DURADES            : [3.0, 2.2, 1.6, 1.0],  // un valor per cicle
+  ESPERA_INICIAL     : 0.6,
+  PAUSA_ENTRE_CICLES : 0.4,
+  ESPERA_FINAL       : 1.5,
+  BUCLE              : false,   // true = torna a començar sol
+  TEMPS_APAGADA      : 0.4,     // #C9A227 -> #3A3A3A
+  FOS_ETIQUETA       : 0.15,    // mig fos de "cicle n" (x2 = fos complet)
+
+  /* ---- corba d'acceleració ---- */
+  // smootherstep: arrenca i s'atura suau, accelera al mig
+  ACCELERACIO: x => x*x*x*(x*(x*6 - 15) + 10),
+  // alternatives:
+  // ACCELERACIO: x => x*x*x,           // només accelera (ease-in cúbic)
+  // ACCELERACIO: x => x*x*(3 - 2*x),   // smoothstep
+
+  /* ---- punts ---- */
+  NOMBRE_PUNTS     : 30,
+  DIAMETRE_PUNT    : 6,
+  SEPARACIO_MINIMA : 26,   // px entre centres de punts
+  MARGE_INTERIOR   : 16,   // px lliures entre el punt més exterior i la vora
+  LLAVOR           : 7,    // canvia-la per obtenir una altra distribució
+
+  /* ---- tipografia i etiquetes ---- */
+  FONT            : 'ui-monospace, "DejaVu Sans Mono", "Courier New", monospace',
+  COS_LLETRA      : 22,
+  TEXT_RC         : 'r_c',
+  SEPARACIO_RC    : 24,    // px des de la vora del cercle
+  RC_SEGUEIX_VORA : true,  // false = es queda a la posició inicial
+  TEXT_CICLE      : n => 'cicle ' + n,
+  MARGE_CICLE_X   : 80,    // px des de l'esquerra
+  MARGE_CICLE_Y   : 80     // px des de baix
+};
+/* ================= fi dels paràmetres ================= */
+
+
+/* ---------- escala per adaptar-ho a la finestra (1:1 a 1920x1080) ---------- */
+const escenari = document.getElementById('escenari');
+function ajusta(){
+  const e = Math.min(1, innerWidth / P.AMPLADA, innerHeight / P.ALCADA);
+  escenari.style.transform = 'translate(-50%,-50%) scale(' + e + ')';
+}
+addEventListener('resize', ajusta);
+
+/* ---------- SVG ---------- */
+const NS  = 'http://www.w3.org/2000/svg';
+const svg = document.getElementById('svg');
+svg.setAttribute('width',  P.AMPLADA);
+svg.setAttribute('height', P.ALCADA);
+svg.setAttribute('viewBox', '0 0 ' + P.AMPLADA + ' ' + P.ALCADA);
+
+const el = (t, a) => { const n = document.createElementNS(NS, t);
+  for (const k in a) n.setAttribute(k, a[k]); return n; };
+
+const CX = P.AMPLADA * P.CENTRE_X;
+const CY = P.ALCADA  * P.CENTRE_Y;
+const RADIS = P.DIAMETRES.map(d => d / 2);
+
+svg.appendChild(el('rect', {x:0, y:0, width:P.AMPLADA, height:P.ALCADA, fill:P.COLOR_FONS}));
+
+/* ---------- punts: distribució irregular, sense simetria ni graella ---------- */
+function prng(s){ return function(){ s |= 0; s = s + 0x6D2B79F5 | 0;
+  let t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+  return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+function generaPunts(){
+  const rnd = prng(P.LLAVOR);
+  const rMax = RADIS[0] - P.MARGE_INTERIOR;
+  const punts = [];
+  let intents = 0, minSep = P.SEPARACIO_MINIMA;
+  while (punts.length < P.NOMBRE_PUNTS && intents < 200000){
+    intents++;
+    if (intents % 20000 === 0) minSep *= 0.85;           // relaxa si s'encalla
+    const a = rnd() * Math.PI * 2;
+    const d = rMax * Math.sqrt(rnd());                    // uniforme dins del disc
+    const x = CX + Math.cos(a) * d, y = CY + Math.sin(a) * d;
+    let ok = true;
+    for (const p of punts) if (Math.hypot(p.x - x, p.y - y) < minSep){ ok = false; break; }
+    if (ok) punts.push({x:x, y:y, d:d, tFora:0, color:null, node:null});
+  }
+  return punts;
+}
+const punts = generaPunts();
+
+for (const p of punts){
+  p.node = el('circle', {cx:p.x, cy:p.y, r:P.DIAMETRE_PUNT/2, fill:P.COLOR_ACTIU});
+  svg.appendChild(p.node);
+}
+
+/* ---------- cercle ---------- */
+const cercle = el('circle', {cx:CX, cy:CY, r:RADIS[0],
+  fill:'none', stroke:P.COLOR_ACTIU, 'stroke-width':P.GRUIX_CONTORN});
+svg.appendChild(cercle);
+
+/* ---------- etiquetes ---------- */
+const etRC = el('text', {x:CX + RADIS[0] + P.SEPARACIO_RC, y:CY,
+  fill:P.COLOR_ACTIU, 'font-family':P.FONT, 'font-size':P.COS_LLETRA,
+  'text-anchor':'start', 'dominant-baseline':'middle'});
+etRC.textContent = P.TEXT_RC;
+svg.appendChild(etRC);
+
+const etCicle = el('text', {x:P.MARGE_CICLE_X, y:P.ALCADA - P.MARGE_CICLE_Y,
+  fill:P.COLOR_ETIQUETA_CICLE, 'font-family':P.FONT, 'font-size':P.COS_LLETRA,
+  'text-anchor':'start'});
+etCicle.textContent = P.TEXT_CICLE(1);
+svg.appendChild(etCicle);
+
+/* ---------- línia de temps ---------- */
+const trams = [];
+const CANVIS = [];          // moments en què comença el canvi d'etiqueta
+let T = 0;
+function tram(o){ o.t0 = T; T += o.dur; o.t1 = T; trams.push(o); return o; }
+
+tram({tipus:'espera', dur:P.ESPERA_INICIAL, r:RADIS[0]});
+for (let i = 0; i < P.DURADES.length; i++){
+  tram({tipus:'contrau', dur:P.DURADES[i], r0:RADIS[i], r1:RADIS[i+1]});
+  const ultim = (i === P.DURADES.length - 1);
+  const pausa = tram({tipus:'espera', dur: ultim ? P.ESPERA_FINAL : P.PAUSA_ENTRE_CICLES,
+                      r:RADIS[i+1]});
+  if (!ultim) CANVIS.push({t:pausa.t0, cicle:i + 2});
+}
+const DURADA_TOTAL = T;
+
+/* radi en funció del temps: funció pura, monòtona decreixent */
+function radi(t){
+  if (t <= 0) return RADIS[0];
+  if (t >= DURADA_TOTAL) return RADIS[RADIS.length - 1];
+  for (const s of trams){
+    if (t < s.t1){
+      if (s.tipus === 'espera') return s.r;
+      return s.r0 + (s.r1 - s.r0) * P.ACCELERACIO((t - s.t0) / s.dur);
+    }
+  }
+  return RADIS[RADIS.length - 1];
+}
+
+/* etiqueta de cicle: número i opacitat, també funció pura */
+function etiqueta(t){
+  let cicle = 1, op = 1;
+  for (const c of CANVIS){
+    const tc = c.t + P.FOS_ETIQUETA;          // moment del canvi de text
+    if (t >= tc) cicle = c.cicle;
+    const d = Math.abs(t - tc);
+    if (d < P.FOS_ETIQUETA) op = Math.min(op, d / P.FOS_ETIQUETA);
+  }
+  return {cicle:cicle, op:op};
+}
+
+/* moment exacte en què cada punt queda fora (cerca binària sobre radi(t)) */
+for (const p of punts){
+  if (p.d >= RADIS[0]) { p.tFora = 0; continue; }
+  if (p.d < RADIS[RADIS.length - 1]) { p.tFora = Infinity; continue; }
+  let a = 0, b = DURADA_TOTAL;
+  for (let i = 0; i < 40; i++){
+    const m = (a + b) / 2;
+    if (radi(m) > p.d) a = m; else b = m;
+  }
+  p.tFora = b;
+}
+
+/* ---------- interpolació de color ---------- */
+const rgb = h => [parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16)];
+const C_ACTIU = rgb(P.COLOR_ACTIU), C_APAGAT = rgb(P.COLOR_APAGAT);
+function barreja(k){
+  const c = C_ACTIU.map((v,i) => Math.round(v + (C_APAGAT[i] - v) * k));
+  return 'rgb(' + c[0] + ',' + c[1] + ',' + c[2] + ')';
+}
+
+/* ---------- dibuix d'un instant concret (tot depèn només de t) ---------- */
+let cicleVisible = null;
+
+function mostra(t){
+  const r = radi(t);
+  cercle.setAttribute('r', r);
+  if (P.RC_SEGUEIX_VORA) etRC.setAttribute('x', CX + r + P.SEPARACIO_RC);
+
+  for (const p of punts){
+    const k = t < p.tFora ? 0 : Math.min(1, (t - p.tFora) / P.TEMPS_APAGADA);
+    const c = k <= 0 ? P.COLOR_ACTIU : (k >= 1 ? P.COLOR_APAGAT : barreja(k));
+    if (p.color !== c){ p.color = c; p.node.setAttribute('fill', c); }
+  }
+
+  const e = etiqueta(t);
+  if (cicleVisible !== e.cicle){
+    cicleVisible = e.cicle;
+    etCicle.textContent = P.TEXT_CICLE(e.cicle);
+  }
+  etCicle.setAttribute('opacity', e.op);
+}
+
+/* ---------- bucle d'animació ---------- */
+let t0 = null, pausat = false, tPausa = 0;
+
+function reinicia(){ t0 = null; tPausa = 0; pausat = false; }
+
+function quadre(ms){
+  if (t0 === null) t0 = ms;
+  let t = pausat ? tPausa : (ms - t0) / 1000;
+  if (P.BUCLE && t > DURADA_TOTAL){ t0 = ms; t = 0; }
+  mostra(Math.min(t, DURADA_TOTAL));
+  requestAnimationFrame(quadre);
+}
+
+ajusta();
+mostra(0);
+requestAnimationFrame(quadre);
+
+/* r = torna a començar · barra d'espai = pausa/continua
+   des de la consola: mostra(4.2) dibuixa l'instant 4,2 s (amb pausa activada) */
+addEventListener('keydown', ev => {
+  if (ev.key === 'r' || ev.key === 'R') reinicia();
+  if (ev.code === 'Space'){
+    ev.preventDefault();
+    if (pausat){ t0 = performance.now() - tPausa * 1000; pausat = false; }
+    else { tPausa = (performance.now() - t0) / 1000; pausat = true; }
+  }
+});
+</script>
+</body>
+</html>

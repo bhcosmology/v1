@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Una exploración sobre la Cosmología de los Agujeros Negros · The Black Hole Cosmology</title>
+<meta name="description" content="La cosmología de los agujeros negros ( Black Hole Cosmology , BHC) es una familia de propuestas teóricas que exploran la posibilidad de que los agujeros negros generen dominios…">
+<link rel="canonical" href="resum.es.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23020204%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%229%22%20fill%3D%22none%22%20stroke%3D%22%23c8a15e%22%20stroke-width%3D%221.4%22%20opacity%3D%220.75%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%224.2%22%20fill%3D%22%23f2f0ec%22%2F%3E%3C%2Fsvg%3E">
+<meta name="author" content="Pau Padrós Montagut">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Black Hole Cosmology">
+<meta property="og:title" content="Una exploración sobre la Cosmología de los Agujeros Negros · The Black Hole Cosmology">
+<meta property="og:description" content="La cosmología de los agujeros negros ( Black Hole Cosmology , BHC) es una familia de propuestas teóricas que exploran la posibilidad de que los agujeros negros generen dominios…">
+<meta property="og:image" content="og-image.png">
+<meta property="og:locale" content="es_ES">
+<link rel="alternate" hreflang="ca" href="resum.ca.html">
+<link rel="alternate" hreflang="es" href="resum.es.html">
+<link rel="alternate" hreflang="en" href="resum.en.html">
+<link rel="alternate" hreflang="x-default" href="resum.ca.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['$$','$$']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+:root{--bg:#020204;--ink:#f2f0ec;--gold:#c8a15e;--gold-soft:#c8a15e55;
+--t1:#e8e4dc;--t2:#c9c4bb;--t3:#b8b4ac;--t4:#9a958c;--t5:#8a857c;--t6:#7a766e;--t7:#6a665e;
+--surface:#08070c;--line:#141318;--line-2:#16151c}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+::selection{background:var(--gold);color:var(--bg)}
+.top{position:sticky;top:0;z-index:20;display:flex;gap:22px;align-items:center;flex-wrap:wrap;
+     padding:16px 6vw;background:#020204ee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+     font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--t4)}
+.top a{text-decoration:none}.top a:hover{color:var(--ink)}
+.top .dot{width:8px;height:8px;border-radius:50%;background:var(--ink);box-shadow:0 0 12px 2px var(--gold-soft);display:inline-block}
+.langs{margin-left:auto;display:flex;gap:8px}
+.langs b{color:var(--ink);font-weight:600}
+main{max-width:74ch;margin:0 auto;padding:7vh 6vw 14vh}
+h1{font-weight:600;font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.06;letter-spacing:-.032em;margin:0 0 10px}
+.lead{font-family:'Newsreader',serif;font-weight:300;font-size:1.1rem;color:var(--t4);margin:0 0 6px}
+.badge{display:inline-block;margin:18px 0 0;padding:6px 13px;border:1px solid var(--line-2);border-radius:999px;
+       font:600 10px/1 ui-monospace,Menlo,monospace;letter-spacing:.2em;color:var(--t5)}
+.note{margin:14px 0 0;font-size:13px;color:var(--t5)}
+nav.toc{margin:44px 0 0;padding:22px 26px;border:1px solid var(--line-2);border-radius:14px;background:var(--surface)}
+nav.toc h2{margin:0 0 12px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--t5);font-weight:600}
+nav.toc ul{margin:0;padding-left:0;list-style:none;color:var(--t5)}
+nav.toc li::before{content:none}
+nav.toc li{margin:.36em 0;font-size:13.6px;line-height:1.35}
+nav.toc a{color:var(--t3);text-decoration:none}
+nav.toc a:hover{color:var(--gold)}
+.sec{scroll-margin-top:80px}
+.sec+.sec{margin-top:4.2em;padding-top:4.2em;border-top:1px solid var(--line)}
+h2{font-weight:600;font-size:clamp(1.42rem,2.5vw,1.96rem);letter-spacing:-.024em;line-height:1.16;margin:2.2em 0 1.1em;color:var(--ink)}
+h3{font-weight:600;font-size:1.19rem;letter-spacing:-.01em;margin:2.6em 0 1em;color:var(--ink);scroll-margin-top:80px}
+p{font-family:'Newsreader',serif;font-weight:300;font-size:1.18rem;line-height:1.78;color:var(--t2);margin:0 0 1.42em}
+p strong{color:var(--t1);font-weight:500}p em{color:var(--t1)}
+ul{padding-left:1.15em;list-style:none;margin:0 0 1.5em}
+li{font-family:'Newsreader',serif;font-weight:300;font-size:1.12rem;line-height:1.7;color:var(--t2);margin-bottom:.55em;position:relative}
+ul li::before{content:"—";position:absolute;left:-1.15em;color:var(--t6)}
+.eq{margin:1.8em 0;padding:18px 22px;background:var(--surface);border:1px solid #191822;border-left:2px solid var(--gold);border-radius:10px;overflow-x:auto;text-align:center}
+.eq.pending{text-align:left;border-left-color:#3a3630}
+.eq.pending code{font:500 13px/1.5 ui-monospace,Menlo,monospace;color:var(--t5)}
+.tablewrap{margin:2em 0;overflow-x:auto;border:1px solid #191822;border-radius:10px;background:var(--surface)}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;padding:12px 16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid #201f2a;white-space:nowrap}
+td{padding:11px 16px;font-size:13.4px;color:var(--t2);border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+mjx-container{color:var(--t1)!important}
+footer{border-top:1px solid var(--line);padding:34px 6vw;color:var(--t7);font-size:12.5px;text-align:center}
+@media print{.top,nav.toc{display:none}body{background:#fff;color:#000}p,li{color:#111}h1,h2,h3{color:#000}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a href="Home.dc.html"><span class="dot"></span></a>
+  <a href="Home.dc.html">Inicio</a>
+  <a href="Documents.dc.html?lang=es">Lector interactivo</a>
+  <span class="langs"><a href="resum.ca.html">CA</a><span style="color:var(--t7)">·</span><b>ES</b><span style="color:var(--t7)">·</span><a href="resum.en.html">EN</a></span>
+</header>
+<main>
+  <h1>Una exploración sobre la Cosmología de los Agujeros Negros</h1>
+  <p class="lead">Resumen del marco teórico · Pau Padrós Montagut · Treball de Recerca de Bachillerato — Cataluña, 2025–2026</p>
+  <div><span class="badge">BORRADOR DE TRABAJO</span></div>
+  
+  <nav class="toc"><h2>Contenido</h2><ul>
+<li><a href="#tesi-central">Tesis central</a></li>
+<li><a href="#fisica-establerta">El punto de partida: física establecida</a></li>
+<li><a href="#precedents">Precedentes y posicionamiento</a></li>
+<li><a href="#fonaments-conceptuals">Fundamentos conceptuales</a></li>
+<li><a href="#consequencies-cosmologiques">Consecuencias cosmológicas</a></li>
+<li><a href="#mecanisme-fisic">Mecanismo físico</a></li>
+<li><a href="#parentesi-temporal">El modelo de paréntesis temporal</a></li>
+<li><a href="#comptabilitat-entropica">Contabilidad entrópica</a></li>
+<li><a href="#constant-cosmologica">La constante cosmológica: dos derivaciones y un muro</a></li>
+<li><a href="#resultats-genuins">Dos resultados genuinos</a></li>
+<li><a href="#signatures-observacionals">Firmas observacionales</a></li>
+<li><a href="#limitacions">Limitaciones y decisiones pendientes</a></li>
+<li><a href="#estatus-epistemologic">Estatus epistemológico y contexto</a></li>
+  </ul></nav>
+<section class="sec" id="tesi-central">
+<h2>Tesis central</h2>
+<p>La cosmología de los agujeros negros (<em>Black Hole Cosmology</em>, BHC) es una familia de propuestas teóricas que exploran la posibilidad de que los agujeros negros generen dominios cosmológicos nuevos. Autores como Popławski, Smolin, Easson y Brandenberger han propuesto mecanismos concretos. Este trabajo se sitúa en ese campo y desarrolla una variante específica, partiendo de $\Lambda$CDM y la relatividad general y siguiéndolas hasta sus límites lógicos, sin introducir campos, partículas ni parámetros libres nuevos.</p>
+<p>La propuesta central es que el interior de cada agujero negro constituye un <strong>dominio temporal causalmente independiente</strong>: un espaciotiempo con su propia flecha del tiempo, su propia evolución termodinámica y su propio estado final. Bajo esta lectura, nuestro universo se originó dentro de un agujero negro formado en un universo padre, y cada agujero negro formado en el nuestro genera un universo hijo.</p>
+<p>La propuesta no es que un agujero negro <em>sea</em> un universo, sino que se forma uno dentro: causalmente sellado respecto al nuestro, con su propio tiempo independiente, expandiéndose con la energía del colapso que lo produjo. Vive, envejece y acaba en un estado de aislamiento causal completo — y ese estado final, visto desde fuera, es indistinguible de lo que un agujero negro siempre ha parecido.</p>
+<p>Lo que distingue esta variante de sus vecinas es el <strong>tipo</strong> de ingrediente que añade. Smolin modifica las constantes físicas entre generaciones; Popławski modifica la teoría de la gravedad subyacente introduciendo torsión de Einstein-Cartan. Este marco no hace ninguna de las dos cosas: sus aportaciones son interpretativas y conceptuales, no modificaciones de las ecuaciones de campo ni de las constantes fundamentales. Esto no lo hace menos especulativo, sino especulativo de una manera distinta, y sitúa su punto de ruptura con la física establecida en un lugar muy concreto: no en las ecuaciones, sino en la lectura de lo que significa la separación causal.</p>
+<p>Es, por tanto, un marco conceptual y lógico, no una teoría física completa. No tiene formalismo matemático propio, no puede hacer predicciones cuantitativas más allá de las relaciones estructurales que deriva, y su formalización completa depende de una teoría de gravedad cuántica que todavía no existe. Lo que sí puede hacer, y lo que este resumen documenta, es seguir la física establecida hasta donde llega, marcar con precisión dónde se acaba y proponer una continuación coherente a partir de ese punto.</p>
+</section>
+<section class="sec" id="fisica-establerta">
+<h2>El punto de partida: física establecida</h2>
+<p>Todo el edificio se apoya sobre resultados que no están en discusión, y conviene enumerarlos porque marcan qué parte del marco es herencia y cuál es aportación.</p>
+<p><strong>La conmutación de coordenadas de Schwarzschild.</strong> Fuera del horizonte de sucesos, la coordenada radial $r$ es espacial y la coordenada $t$ es temporal. Dentro del horizonte, sus roles se intercambian: el término métrico asociado a $r$ cambia de signo, y con él el carácter causal de la coordenada. El avance hacia $r$ decreciente se vuelve tan inevitable como lo es fuera el avance hacia el futuro. Esto no es una convención ni un artefacto de coordenadas, sino una propiedad de la signatura de la métrica, y es el hecho establecido sobre el que descansa toda la lectura de ortogonalidad temporal.</p>
+<p><strong>La singularidad como límite de la teoría.</strong> Los teoremas de singularidad de Penrose y Hawking garantizan que el colapso gravitacional genérico produce una singularidad. Pero la relatividad general no afirma que allí diverja nada físico: afirma que la teoría ha llegado al límite de su dominio de validez. La singularidad es un indicador de incompletitud, no una respuesta, y es precisamente el espacio que el marco ocupa.</p>
+<p><strong>$\Lambda$CDM y las ecuaciones de Friedmann.</strong> El modelo cosmológico estándar describe un universo plano, homogéneo e isótropo a gran escala, en expansión acelerada gobernada por una constante cosmológica $\Lambda$ con ecuación de estado $w = -1$. Las ecuaciones de Friedmann ligan algebraicamente $\Lambda$, el parámetro de Hubble, la densidad y la curvatura — una relación que, como se verá, acabará siendo el muro contra el que choca la parte cuantitativa del trabajo.</p>
+<p><strong>Termodinámica de horizontes.</strong> Bekenstein y Hawking establecieron que un agujero negro tiene entropía proporcional al área de su horizonte y emite radiación térmica a temperatura inversamente proporcional a su masa. Gibbons y Hawking demostraron que el horizonte cosmológico de un espacio de Sitter emite igualmente radiación térmica, con una entropía también proporcional al área. Que <em>ambos</em> horizontes sean objetos termodinámicos con entropía y temperatura bien definidas es el hecho que hace posible la derivación de la constante cosmológica del segundo anexo.</p>
+<p><strong>La curva de Page.</strong> Bajo conservación de la información, la entropía de la radiación emitida por un agujero negro crece hasta un máximo hacia la mitad de su vida y después decrece hasta cero cuando la evaporación se completa, garantizando que toda la información acabe emergiendo. El marco adopta este resultado para describir el ritmo del retorno de información del hijo al padre.</p>
+</section>
+<section class="sec" id="precedents">
+<h2>Precedentes y posicionamiento</h2>
+<p>El trabajo no nace de la nada, y parte de su labor es situarse con precisión respecto a lo que ya existe.</p>
+<p><strong>Smolin</strong> propone una cosmología de selección natural: cada agujero negro genera un universo hijo con constantes físicas ligeramente mutadas, y los universos que producen más agujeros negros tienen más descendencia, de manera que las constantes que favorecen la estructura dominan estadísticamente. Llega a una red de universos parecida a la de este marco, pero por un camino distinto y con dos ingredientes propios: mutación y selección.</p>
+<p><strong>Popławski</strong> introduce la torsión de Einstein-Cartan como mecanismo para evitar la singularidad y generar la expansión del hijo. Es una modificación de la teoría de la gravedad subyacente.</p>
+<p><strong>Susskind, Thorlacius y Uglum</strong> formularon la complementariedad de agujeros negros: el observador externo y el que cae libremente tienen descripciones mutuamente exclusivas pero individualmente consistentes de la misma física, y ninguna operación física puede compararlas porque el horizonte los separa. Este principio es el precedente más importante para el marco, que lo extiende de la relación observador-observador a la relación padre-hijo.</p>
+<p><strong>La gravedad cuántica de bucles y el modelo de Gaztañaga</strong> proponen rebotes donde la materia se comprime hasta un mínimo finito y se reexpande. Comparten con este marco la evitación de la singularidad por efectos cuánticos a escala de Planck, pero se separan en un punto decisivo: en aquellos modelos la variedad se mantiene <em>continua</em> a través del rebote. Este marco propone que se rompe. Toda la diferencia posterior — la ortogonalidad temporal, la desconexión causal, el borrado de Weyl — depende de esta elección.</p>
+</section>
+<section class="sec" id="fonaments-conceptuals">
+<h2>Fundamentos conceptuales</h2>
+<p><strong>Ortogonalidad temporal.</strong> La conmutación de coordenadas dentro del horizonte se interpreta como la signatura geométrica de un eje temporal genuinamente independiente. Si la dirección temporal obligatoria del interior apunta hacia valores decrecientes de una coordenada que el padre percibe como espacial, entonces el eje temporal del hijo apunta hacia donde el padre ve espacio — que es, en el sentido preciso que el marco da al término, serle ortogonal. Hay que ser explícito: la conmutación es un dato establecido, pero la relatividad general la lee como un fenómeno interno a una variedad continua. Leerla como ortogonalidad genuina es una propuesta de este trabajo, no una consecuencia del formalismo estándar.</p>
+<p><strong>Derivaciones del espacio de Sitter.</strong> En un universo dominado por $\Lambda$, los sistemas gravitacionalmente vinculados son los únicos dominios donde el tiempo queda operacionalmente definido. La frontera causal de un sistema de masa $M$ se sitúa en</p>
+<div class="eq">$$r_c = \left(\frac{3GM}{\Lambda c^{2}}\right)^{1/3}$$</div>
+<p>Más allá, la desconexión causal es permanente e irreversible: ninguna señal podrá volver a cruzar en ninguna dirección, nunca más.</p>
+<p><strong>Desrealización e islas temporales.</strong> Aquí entra el paso interpretativo del que depende el resto. La separación causal permanente no se entiende como una simple imposibilidad práctica de comunicación, sino como una <strong>diferencia ontológica</strong>: aquello que es causalmente real para un sistema puede ser causalmente inexistente para otro, sin que ninguno de los dos se equivoque. Un constituyente que supera $r_c$ queda <em>desrealizado</em>: no ha desaparecido, pero ha dejado de formar parte de la realidad causal del sistema. Los dominios que quedan son <em>islas temporales</em>, los únicos lugares donde el tiempo conserva contenido operacional, porque el tiempo se define relacionalmente a través de las interacciones entre constituyentes.</p>
+<p><strong>Entropía en singularidades.</strong> La entropía de Boltzmann está mal definida en los límites extremos de curvatura y de dispersión, donde el número de microestados tiende a infinito y la probabilidad de un macroestado se vuelve dependiente del observador. Esta observación prepara la lectura relacional de la entropía que el marco desarrollará después.</p>
+<p><strong>Dualidad de singularidades contrarias.</strong> Densidad infinita (singularidad de curvatura) y densidad cero (estado final de de Sitter) producen el mismo resultado operacional: aislamiento causal completo, terminación temporal y radiación térmica. Condiciones de frontera opuestas con consecuencias físicas equivalentes. Esta dualidad no es una analogía decorativa: como se verá, deja una huella numérica exacta en la relación entre la constante cosmológica y la masa del padre.</p>
+</section>
+<section class="sec" id="consequencies-cosmologiques">
+<h2>Consecuencias cosmológicas</h2>
+<p><strong>$w_{\text{eff}}$ emergente y Big Rip efectivo.</strong> Todo sistema vinculado finito bajo $\Lambda$CDM pierde masa monótonamente: la materia bariónica acaba convertida en radiación, sea por desintegración del protón o por el camino más largo de la fusión hasta el hierro y el colapso posterior, y los agujeros negros internos se evaporan. Como $r_c \propto M^{1/3}$, la frontera causal se contrae, lo cual desrealiza nuevos constituyentes, lo cual reduce más la masa, lo cual contrae más la frontera. Es retroalimentación positiva, y es irreversible: no hay manera de aumentar $M$ para compensarla.</p>
+<p>El resultado es que la ecuación de estado efectiva interna se aleja de $w = -1$ sin que $\Lambda$ cambie globalmente. No es que la energía oscura crezca; es que la contrapartida gravitatoria mengua, y la misma $\Lambda$ constante se vuelve proporcionalmente dominante. Desde dentro, el efecto es operacionalmente el de un Big Rip: toda la estructura se disuelve. La diferencia con el Big Rip estándar es que aquí el desgarro no es mecánico sino causal, y que ocurre asintóticamente, no en tiempo finito.</p>
+<p><strong>Red cosmológica.</strong> Cada agujero negro genera un dominio temporal que evoluciona hasta la desconexión completa y devuelve masa-energía al padre como radiación de Hawking: una red de universos conectados por agujeros negros, jerárquica y en principio ilimitada en profundidad. Las propiedades del hijo quedan determinadas por la masa y el espín del padre en el momento del colapso. El marco es compatible tanto con un modelo determinista, donde no hay variación entre generaciones, como con uno smoliniano con mutación — y reconoce que distinguirlos es empíricamente imposible desde dentro de cualquier universo de la red.</p>
+</section>
+<section class="sec" id="mecanisme-fisic">
+<h2>Mecanismo físico</h2>
+<p><strong>El rebote cuántico.</strong> Cuando el colapso llega al régimen de densidad de Planck, la materia no se comprime hasta volumen cero sino que rebota. La energía gravitacional acumulada durante todo el colapso no desaparece: se vuelve a liberar como expansión. El Big Bang del hijo no es una condición inicial misteriosa sino la consecuencia de la conservación de la energía a través del rebote. Como la compresión es isótropa, la expansión resultante también lo es — lo cual da, gratis, el principio cosmológico.</p>
+<p><strong>El empate de infinitos.</strong> El rebote explica cómo la energía se vuelve expansión, pero no por qué el hijo queda causalmente desconectado. Aquí el marco propone que, en el momento de la singularidad, dos tendencias divergen simultáneamente: la compresión gravitacional hacia $r = 0$ y la desconexión causal en el horizonte. Ninguna de las dos se puede resolver dentro de la misma variedad, y la tensión se resuelve con una transición de fase: la variedad se rompe y se instancia una nueva.</p>
+<p><strong>La fundamentación topológica.</strong> Esta ruptura no es un postulado gratuito. Separar una variedad en dos regiones causalmente independientes es un cambio de topología del espacio, y el <strong>teorema de Geroch</strong> (1967) establece que, en relatividad general clásica y suave, la topología del espacio no puede cambiar. Para que cambie, hay que violar alguna de sus hipótesis, y solo hay tres puertas: una singularidad, curvas temporales cerradas, o la pérdida de orientabilidad temporal. Las dos últimas son patologías causales graves. La primera es precisamente lo que el colapso gravitacional ya produce de manera genérica. El marco adopta esta puerta, y el resultado es que la singularidad deja de ser solo el final de la materia en colapso: se vuelve el punto topológicamente necesario donde la separación en dos dominios independientes se hace posible.</p>
+<p>Trabajos recientes sobre agujeros negros regulares refuerzan esta lectura: se ha demostrado que un núcleo de de Sitter y una región exterior asintóticamente plana, unidos dentro de una misma variedad, fuerzan la aparición de curvas temporales cerradas, y que evitarlas exige admitir un cambio de topología. Esta configuración es esencialmente la del marco.</p>
+<p><strong>Génesis dimensional.</strong> La ruptura no destruye dimensiones: las separa. El padre conserva las suyas; el hijo tiene las propias, causalmente independientes. Nada se pierde — lo que deja de existir es la conexión. Un argumento de simetría sostiene que la ruptura debe afectar a la variedad entera y no selectivamente a algunas coordenadas, porque una variedad es un objeto unitario y una ruptura parcial exigiría un tratamiento asimétrico de las dimensiones que ningún principio establecido justifica.</p>
+<p><strong>Modelo de un solo impulso.</strong> El hijo recibe toda su energía en un único suceso, el rebote. No hay alimentación continua ni conexión energética persistente. Esto explica por qué $\Lambda$ aparece constante: la patada fue puntual y ya se ha completado, de manera que ningún proceso en curso puede modificarla. $\Lambda$ no es una propiedad abstracta del vacío, sino el residuo permanente de aquel impulso, expresado en el lenguaje de las ecuaciones de Friedmann.</p>
+</section>
+<section class="sec" id="parentesi-temporal">
+<h2>El modelo de paréntesis temporal</h2>
+<p>Si los ejes temporales del padre y del hijo son independientes, ¿qué relación hay exactamente entre ellos? Es una pregunta que todo marco de cosmología de agujeros negros debería responder y que la mayoría esquiva. El trabajo llega a ella por eliminación, examinando las tres opciones posibles.</p>
+<p><strong>La correspondencia instante a instante</strong> se descarta por dos razones independientes. La primera es de escala: la vida del hijo a lo largo de su propio eje (entre $10^{100}$ y magnitudes del orden de $10^{10^{76}}$ años, según si el protón se desintegra) y el tiempo de evaporación del agujero negro medido por el padre (del orden de $10^{141}$ años para la masa que la relación entrópica asigna a nuestro padre) no mantienen ninguna proporcionalidad físicamente natural; cualquier factor de conversión sería un artefacto de ajuste. La segunda es más fundamental: ya en la física estándar, el tiempo propio finito de la materia que cae y el tiempo coordenado infinito que el observador externo le atribuye muestran que no hay correspondencia 1-1 entre los dos lados del horizonte ni siquiera dentro de una única variedad.</p>
+<p><strong>El coeficiente de dilatación variable</strong> se descarta porque es intrínsecamente <em>ad hoc</em> — una función libre entera introducida a mano para hacer cuadrar las escalas —, porque presupone una proyección de un eje sobre el otro que la conmutación de signatura no permite, y porque la intuición que lo sostiene confunde dos referenciales: que la radiación de Hawking se acelere hacia el final es un hecho sobre el horizonte visto desde el padre, y no implica nada sobre el ritmo interno del hijo.</p>
+<p><strong>La ortogonalidad estricta</strong> queda, pues, como la única opción que no introduce estructura no justificada. Toda la vida del hijo corresponde, desde el padre, a un único instante indeterminado: el de la formación del agujero negro. No es que el tiempo del hijo pase muy deprisa o muy lentamente visto desde el padre; es que la categoría misma de «medido en unidades del tiempo del padre» no se aplica.</p>
+<p>Una vez adoptada, la ortogonalidad se revela fértil. <strong>Resuelve el problema de la estrella congelada</strong>: el observador externo ve la materia congelada en el horizonte precisamente porque la historia interior no transcurre a lo largo de su eje. La congelación es literalmente correcta desde el padre, y la vida completa es literalmente correcta desde el hijo; no son descripciones contradictorias de una misma cosa, sino descripciones de dos ejes distintos. <strong>Disuelve la incompatibilidad de escalas</strong> que hacía insostenibles las otras opciones: preguntar cuál de los dos tiempos es más largo deja de tener sentido, como no lo tiene preguntar si una distancia horizontal es más larga que un intervalo temporal.</p>
+<p><strong>Y explica el ritmo del retorno de información.</strong> Bajo ortogonalidad, toda la información del hijo está presente en la frontera desde el instante en que el paréntesis se abre. ¿Por qué no retorna instantáneamente, entonces? Porque el ritmo no lo limita la disponibilidad de la información sino la termodinámica del horizonte: la frontera radia como un cuerpo negro, y la ley de Stefan-Boltzmann impone un techo a la potencia emitida. La curva de Page determina la estructura de la liberación; Stefan-Boltzmann determina su ritmo. Ninguno de los dos requiere un reloj común.</p>
+<p><strong>Paréntesis anidados.</strong> La materia que un agujero negro acreta después de formarse no entra en el hijo original — cuando llega, aquel ya ha completado su vida a lo largo del eje ortogonal. Cada suceso de acreción abre su propio paréntesis independiente. Un agujero negro es, pues, una estructura de paréntesis anidados, y su tiempo de evaporación total refleja la suma de todos ellos.</p>
+</section>
+<section class="sec" id="comptabilitat-entropica">
+<h2>Contabilidad entrópica</h2>
+<p>Si el hijo nace de un agujero negro de entropía altísima, ¿cómo puede empezar con entropía baja sin violar el segundo principio? La respuesta del marco es que la entropía no es una propiedad de las partículas sino del espacio de fases de la variedad en que existen, y que por tanto depende del marco de descripción desde el cual se contabiliza.</p>
+<p>La distinción clave es entre <strong>información</strong>, que es el invariante y se conserva siempre, y <strong>entropía</strong>, que es la parte de la descripción relativa al marco causal. El hijo no empieza con entropía objetivamente nula en ningún sentido absoluto: empieza desde el mínimo de <em>su</em> marco, del mismo modo que un observador que abre los ojos ante un gas ya esparcido toma ese estado como inicial sin negar que antes había uno más concentrado.</p>
+<p>Hay, sin embargo, una diferencia importante respecto de esta analogía, y es lo que hace que la lectura no sea una mera entropía subjetiva: en el caso del gas, el observador ignora un estado que existe en su mismo marco temporal y que habría podido ver; en el caso del hijo, el estado del padre es inaccesible por <em>estructura causal</em>, no por ignorancia. La inaccesibilidad es estructural, no epistémica.</p>
+<p>El propio mecanismo de Hawking da un argumento de consistencia. Si la entropía se destruyera objetivamente en la ruptura, la radiación que retorna al padre tendría que salir desprovista de la información original. Pero bajo la curva de Page toda la información acaba emergiendo — lo cual confirma que nunca se destruyó: se conservó como invariante, mientras que lo que difería entre padre e hijo era solo la entropía accesible desde cada marco.</p>
+<p>Sobre la naturaleza exacta del retorno, el marco se mantiene honesto: es compatible con las tres resoluciones del problema de la información de Hawking — preservación unitaria, termalización, o reset por ruptura — y adopta la primera como <em>hipótesis de trabajo</em>, por ser la única compatible con la conservación de información que ya asume por razones independientes. Adoptarla no equivale a demostrarla.</p>
+</section>
+<section class="sec" id="constant-cosmologica">
+<h2>La constante cosmológica: dos derivaciones y un muro</h2>
+<p>El segundo anexo intenta conectar el marco con uno de los parámetros más enigmáticos de la física. El punto de partida es que la frontera entre padre e hijo admite <em>dos</em> descripciones termodinámicas — desde el padre, el horizonte de sucesos del agujero negro; desde el hijo, el horizonte cosmológico de de Sitter — y que ambas se pueden conectar.</p>
+<p><strong>Vía térmica.</strong> Igualar la temperatura de Hawking y la de Gibbons-Hawking da una relación sin ningún parámetro libre:</p>
+<div class="eq">$$\Lambda_{\text{térmica}} = \frac{3c^{4}}{16\,G^{2}M^{2}}$$</div>
+<p>Es formalmente elegante y numéricamente próxima al valor observado, pero esconde una tensión: igualar temperaturas presupone equilibrio térmico entre los dos lados de la frontera, y el marco niega explícitamente ese equilibrio, porque los ejes temporales no son compartidos. No se puede equilibrar térmicamente a lo largo de un tiempo que no es común.</p>
+<p><strong>Vía entrópica.</strong> Sustituir la igualación de temperaturas por la de entropías elimina este supuesto. El equilibrio térmico es una condición dinámica que exige contacto; la igualdad de entropías es una condición de conservación que solo exige que la información se preserve — cosa que el marco ya adopta por razones independientes. De ahí:</p>
+<div class="eq">$$\Lambda_{\text{entrópica}} = \frac{3c^{4}}{4\,G^{2}M^{2}}$$</div>
+<p>La forma funcional es la misma; el coeficiente difiere en un factor exacto de cuatro. La diferencia no es un error: es el cuadrado del factor dos que separa las gravedades de superficie de los dos horizontes, y por tanto <strong>la signatura cuantitativa de la dualidad de singularidades contrarias</strong>. Que la dualidad, introducida mucho antes por razones puramente conceptuales, reaparezca aquí como un factor numérico exacto es uno de los resultados de coherencia interna más sólidos del trabajo.</p>
+<p>La dependencia inversa puede parecer contraintuitiva — una patada más energética debería dar más $\Lambda$ —, pero es exactamente lo que la dualidad predice: más masa quiere decir horizonte más grande, y un horizonte de Sitter más grande corresponde a una constante cosmológica <em>menor</em>. Los agujeros negros más masivos generan universos más grandes y de curvatura de fondo menor.</p>
+<p><strong>El muro de Friedmann.</strong> El tercer paso es comprobar el estatus epistemológico de la relación, y aquí aparece el límite. Las ecuaciones de Friedmann ligan algebraicamente $\Lambda$ a $H_0$, a la densidad y a la curvatura. Cualquier cantidad cosmológica global medible — la masa del universo observable, el parámetro de densidad, la edad, el tamaño del horizonte — contiene $\Lambda$ implícitamente. Introducirla en la relación para «predecir» $\Lambda$ es, pues, recuperar lo que ya se había puesto.</p>
+<p>La relación es, por tanto, una <strong>condición de consistencia, no una predicción independiente</strong>. El anexo documenta cinco vías intentadas para encontrar una masa independiente de $\Lambda$ y muestra que todas chocan con el mismo muro; superarlo exigiría física nueva fuera de $\Lambda$CDM. Vale la pena subrayar qué se ha conservado y qué se ha perdido: el cálculo es correcto y la derivación se mantiene; lo que había que revisar era su <em>interpretación</em>. Documentar esta distinción, en lugar de esconderla, es parte del resultado.</p>
+</section>
+<section class="sec" id="resultats-genuins">
+<h2>Dos resultados genuinos</h2>
+<p>Hay dos contribuciones que no dependen de superar el muro, y son las que el trabajo defiende con más confianza.</p>
+<p><strong>El problema del horizonte.</strong> Regiones opuestas del cielo que nunca han podido estar en contacto causal comparten la misma temperatura del fondo de microondas con una precisión extraordinaria. La cosmología estándar lo resuelve con inflación. Aquí, si todo el contenido del hijo proviene de un solo agujero negro del padre y el estado en el momento de la ruptura es unitario, la homogeneidad no hay que explicarla: es heredada. No hace falta que regiones distantes hayan intercambiado información, porque ambas vienen del mismo origen. La resolución es robusta porque no depende ni de la planitud ni del valor de $\Lambda$.</p>
+<p><strong>La baja entropía gravitatoria inicial.</strong> Penrose identificó como cuestión fundamental por qué el universo primitivo tenía una entropía gravitatoria tan baja, medida por el tensor de Weyl. El marco ofrece un mecanismo: la ruptura rompe la conexión geométrica entre padre e hijo, y la curvatura libre del padre — codificada en el tensor de Weyl — no atraviesa la discontinuidad, mientras que el tensor de Ricci, acoplado a la densidad de materia-energía, sí que transporta el contenido heredado. Hace falta la misma cautela de siempre: el Weyl nulo es una propiedad de la descripción desde el hijo, el mínimo de su marco, no una afirmación de que el hijo tenga objetivamente menos entropía gravitatoria que el padre.</p>
+<p>Vale la pena notar que este segundo resultado es una de las pocas cosas que la ruptura ofrece y el rebote continuo no: si la geometría se mantuviera continua, no habría ninguna discontinuidad que explicara el borrado.</p>
+</section>
+<section class="sec" id="signatures-observacionals">
+<h2>Firmas observacionales</h2>
+<p>El marco identifica cuatro puntos donde difiere de $\Lambda$CDM de una manera que es, en principio, distinguible. Ninguno constituye una confirmación, pero conjuntamente establecen que el marco no es empíricamente vacío.</p>
+<p><strong>Asimetría de rotación galáctica.</strong> Si el momento angular del agujero negro padre se imprime sobre la geometría inicial del hijo, la rotación galáctica debería mostrar una dirección preferente a escala cosmológica — algo que $\Lambda$CDM no tiene ningún mecanismo para producir. Los análisis de Lior Shamir han identificado una asimetría estadísticamente significativa, pero los datos son contestados: varios análisis independientes cuestionan si el efecto es físico o refleja sesgos sistemáticos. Se presenta como indicio consistente, no como confirmación.</p>
+<p><strong>Coincidencia de radios.</strong> El radio de Hubble y el radio de Schwarzschild de la masa contenida dentro del universo observable coinciden aproximadamente. Es un hecho numérico aceptado, que $\Lambda$CDM atribuye a la planitud. El marco le da un origen estructural: es una manifestación de la identificación $r_s = r_{dS}$ que recorre todo el trabajo. Con la misma cautela del muro, eso sí: es una consistencia, no una predicción del valor.</p>
+<p><strong>Estructura de correlaciones de la radiación de Hawking.</strong> Si el marco es correcto, la radiación no codifica solo la materia que cayó, sino la historia completa del hijo. Agujeros negros de masas muy distintas deberían tener curvas de Page cualitativamente distintas, no solo escalas temporales distintas. La radiación de Hawking nunca se ha detectado de un agujero negro real, de manera que el valor de este punto es teórico, no observacional: muestra que el marco <em>hace</em> una predicción diferenciable.</p>
+<p><strong>El problema del horizonte</strong>, ya tratado, actúa como cuarta firma de carácter explicativo.</p>
+</section>
+<section class="sec" id="limitacions">
+<h2>Limitaciones y decisiones pendientes</h2>
+<p>El anexo dedica un capítulo entero a la crítica del marco, e identifica <strong>dos limitaciones fundamentales e independientes</strong>.</p>
+<p><strong>La primera es cuantitativa: la conservación de energía a través de la ruptura.</strong> La conservación es siempre una afirmación dentro de un sistema con un marco temporal que permita comparar dos instantes. A través de la ruptura no hay marco común, de manera que la pregunta «¿la energía que el padre pierde es igual a la que el hijo gana?» no se puede ni formular rigurosamente. No es que la respuesta sea negativa: es que la pregunta no está bien planteada con las herramientas actuales. Sin esto, la relación entre $\Lambda$ y la masa del padre pierde fundamentación y la red deja de ser energéticamente cerrada en ningún sentido preciso.</p>
+<p><strong>La segunda es conceptual: la lectura ontológica de la separación causal.</strong> Que dos sistemas separados por $r_{dS}$ no puedan intercambiar ninguna señal es un hecho establecido. Que esta imposibilidad constituya una diferencia en <em>qué es real</em> para cada uno, y no una simple barrera práctica, es una elección interpretativa que la física no obliga a hacer. Pero la desrealización, las islas temporales, el de Sitter terminal y la dualidad de singularidades dependen de ella: si la lectura alternativa fuera la correcta, buena parte del edificio perdería el fundamento.</p>
+<p>Otros problemas abiertos incluyen la paradoja de los tres cuerpos en el espacio de Sitter (que revela los límites del criterio de vinculación newtoniano en regímenes marginales), la sincronización temporal entre padre e hijo, la preservación del entrelazamiento a través de la ruptura, el umbral mínimo de masa para los paréntesis anidados, y el origen del valor concreto de $\Lambda$.</p>
+<p><strong>La planitud no se explica.</strong> La ruptura preserva el contenido pero no la geometría, y la planitud ($\Omega \approx 1$) es precisamente una sintonización entre densidad y tasa de expansión. No puede ser heredada. Es el precio estructural de la ruptura, y podría integrarse vía inflación dentro del hijo, pero no se sigue del marco mismo.</p>
+<p><strong>Ruptura o rebote continuo.</strong> Queda, por tanto, una decisión estructural pendiente. La ruptura es lo que hace el marco distintivo — da sentido a los ejes ortogonales y conecta con el borrado de Weyl — pero obliga a explicar la planitud por un mecanismo adicional. El rebote continuo permitiría heredar la planitud, pero abandonaría la radicalidad que da sentido al resto. El trabajo no disimula que esta elección todavía no está cerrada.</p>
+</section>
+<section class="sec" id="estatus-epistemologic">
+<h2>Estatus epistemológico y contexto</h2>
+<p>El marco es lógicamente coherente, parte de premisas bien fundamentadas, hace predicciones que en principio lo distinguen de la física estándar, e identifica con precisión las hipótesis de las que depende. Lo que no puede hacer, con las herramientas actuales, es demostrarlas. Su situación honesta es la de un edificio conceptual completo e internamente consistente, apoyado sobre pilares que solo una teoría de gravedad cuántica podría asegurar.</p>
+<p>Esta honestidad es, paradójicamente, parte del argumento. Un marco que escondiera estas dependencias, o que las presentara como consecuencias derivadas en lugar de elecciones interpretativas, sería más vulnerable, porque un examinador las encontraría igualmente. Un marco que señala con precisión los dos puntos donde descansa su viabilidad ofrece al lector exactamente lo que necesita para evaluarlo: no una afirmación de certeza, sino un mapa de dónde acaba lo que se puede fundamentar y dónde empieza lo que hay que postular.</p>
+<p>Hay también una asimetría que vale la pena reconocer: el marco puede plantear preguntas que la física estándar no puede ni formular — como la del entrelazamiento a través de una ruptura de la variedad — pero no las puede responder, precisamente porque responderlas exige la física que todavía falta. Esta distancia entre la capacidad de preguntar y la de responder no es un defecto accidental: es la característica estructural de un marco que va más allá de lo que el formalismo actual puede capturar.</p>
+<p>La constante cosmológica sigue siendo un problema abierto de la física. Este marco no lo resuelve desde primeros principios, pero ofrece un ángulo nuevo sobre por qué razón es difícil y sobre qué propiedades debería tener una teoría que lo resolviera.</p>
+<p>Esta investigación forma parte de un Treball de Recerca de bachillerato cuyo cuerpo principal se desarrolla en formato audiovisual mediante entrevistas a especialistas. El objetivo de contactar a investigadores no es buscar validación sino escrutinio crítico: identificar errores, debilidades y conexiones que el autor no haya visto.</p>
+</section>
+
+</main>
+<footer>The Black Hole Cosmology — Pau Padrós Montagut</footer>
+</body>
+</html>
