@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>Vídeos — The Black Hole Cosmology</title>
-<meta name="description" content="Quatre vídeos, pensats per veure’ls en ordre: el problema, el marc i tot allò que no resol. En producció.">
+<meta name="description" content="Quatre vídeos, pensats per veure’ls en ordre: el problema, el marc i tot allò que no resol. El tercer ja es pot veure; la resta, en producció.">
 <link rel="canonical" href="Videos.dc.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23020204%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%229%22%20fill%3D%22none%22%20stroke%3D%22%23c8a15e%22%20stroke-width%3D%221.4%22%20opacity%3D%220.75%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%224.2%22%20fill%3D%22%23f2f0ec%22%2F%3E%3C%2Fsvg%3E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Black Hole Cosmology">
 <meta property="og:title" content="Vídeos — The Black Hole Cosmology">
-<meta property="og:description" content="Quatre vídeos, pensats per veure’ls en ordre: el problema, el marc i tot allò que no resol. En producció.">
+<meta property="og:description" content="Quatre vídeos, pensats per veure’ls en ordre: el problema, el marc i tot allò que no resol. El tercer ja es pot veure; la resta, en producció.">
 <meta property="og:image" content="og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
 <meta property="og:locale:alternate" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Vídeos — The Black Hole Cosmology">
-<meta name="twitter:description" content="Quatre vídeos, pensats per veure’ls en ordre: el problema, el marc i tot allò que no resol. En producció.">
+<meta name="twitter:description" content="Quatre vídeos, pensats per veure’ls en ordre: el problema, el marc i tot allò que no resol. El tercer ja es pot veure; la resta, en producció.">
 <meta name="twitter:image" content="og-image.png">
 <meta name="author" content="Pau Padrós Montagut">
 <link rel="alternate" hreflang="ca" href="Videos.dc.html?lang=ca">
@@ -28,7 +28,7 @@
 <meta name="bhc-page" content="films">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
-<script src="./content.js?v=26"></script>
+<script src="./content.js?v=27"></script>
 </head>
 <body>
 <x-dc>
@@ -103,10 +103,16 @@
 
     <section style="position:sticky;top:96px">
       <div style="position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid #1c1b22">
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:repeating-linear-gradient(135deg,#0a0910,#0a0910 22px,#0c0b13 22px,#0c0b13 44px)">
-          <div style="width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px 3px var(--gold-glow)"></div>
-          <div data-i18n="inProduction" style="font:600 12px/1 ui-monospace,Menlo,monospace;letter-spacing:.28em;text-transform:uppercase;color:var(--t4)">In production</div>
-        </div>
+        <sc-if value="{{ curHasVideo }}">
+          <!-- the YouTube iframe is injected by mountPlayer(), so the raw template never requests a {{ }} src -->
+          <div id="filmPlayer" style="position:absolute;inset:0"></div>
+        </sc-if>
+        <sc-if value="{{ curNoVideo }}" hint-placeholder-val="{{ true }}">
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:repeating-linear-gradient(135deg,#0a0910,#0a0910 22px,#0c0b13 22px,#0c0b13 44px)">
+            <div style="width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px 3px var(--gold-glow)"></div>
+            <div style="font:600 12px/1 ui-monospace,Menlo,monospace;letter-spacing:.28em;text-transform:uppercase;color:var(--t4)">{{ inProduction }}</div>
+          </div>
+        </sc-if>
       </div>
 
       <div style="margin-top:28px;font:600 13px/1 ui-monospace,Menlo,monospace;color:var(--gold)">{{ curNum }}</div>
@@ -122,6 +128,11 @@
           <div style="min-width:0">
             <span style="font-weight:600;font-size:14.5px;letter-spacing:-.01em;color:{{ ch.titleColor }}">{{ ch.title }}</span>
             <div style="margin-top:6px;font-size:12.5px;line-height:1.45;color:var(--t6)">{{ ch.short }}</div>
+            <sc-if value="{{ ch.hasVideo }}">
+              <div style="margin-top:9px;display:inline-flex;align-items:center;gap:7px;font:600 10.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)">
+                <span style="width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block"></span>{{ ch.availableLabel }}
+              </div>
+            </sc-if>
           </div>
         </div>
       </sc-for>
@@ -139,19 +150,40 @@ class Component extends DCLogic {
   constructor(p){
     super(p);
     // content comes from the shared STRINGS dictionary, in the active language
+    // yt: YouTube video id once the film is published ('' = still in production)
     this.keys = [
-      { t:'film1Title', s:'film1Short', d:'film1Desc' },
-      { t:'film2Title', s:'film2Short', d:'film2Desc' },
-      { t:'film3Title', s:'film3Short', d:'film3Desc' },
-      { t:'film4Title', s:'film4Short', d:'film4Desc' },
+      { t:'film1Title', s:'film1Short', d:'film1Desc', yt:'' },
+      { t:'film2Title', s:'film2Short', d:'film2Desc', yt:'' },
+      { t:'film3Title', s:'film3Short', d:'film3Desc', yt:'BfCzrbTWODA' },
+      { t:'film4Title', s:'film4Short', d:'film4Desc', yt:'' },
     ];
-    this.state = { current:0 };
+    // open on the first published film, if any
+    const firstPublished = this.keys.findIndex(k=>k.yt);
+    this.state = { current: firstPublished >= 0 ? firstPublished : 0 };
   }
   componentDidMount(){
     this.i18n();
     this.makeStars();
+    this.mountPlayer();
   }
-  componentDidUpdate(){ this.i18n(); }
+  componentDidUpdate(){ this.i18n(); this.mountPlayer(); }
+  mountPlayer(){
+    requestAnimationFrame(()=>{
+      const box=document.getElementById('filmPlayer'); if(!box) return;
+      const yt=this.keys[this.state.current].yt; if(!yt) return;
+      const src='https://www.youtube-nocookie.com/embed/'+yt+'?rel=0&hl='+(window.BHC_LANG || 'ca');
+      if(box.dataset.src===src) return;
+      box.dataset.src=src;
+      const f=document.createElement('iframe');
+      f.src=src;
+      f.title=(window.t ? window.t(this.keys[this.state.current].t) : 'YouTube');
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen';
+      f.allowFullscreen=true;
+      f.referrerPolicy='strict-origin-when-cross-origin';
+      f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';
+      box.replaceChildren(f);
+    });
+  }
   i18n(){
     if (!window.BHC_applyI18n) return;
     window.BHC_applyI18n();
@@ -183,11 +215,16 @@ class Component extends DCLogic {
         markStyle: 'flex:none;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:600 12px/1 ui-monospace,Menlo,monospace;'+(isCur?'background:var(--ink);color:var(--bg);':'background:#111017;color:var(--t5);border:1px solid #222129;'),
         rowStyle: 'display:flex;gap:14px;padding:16px;border-radius:12px;cursor:pointer;margin-bottom:8px;transition:background .2s;'+(isCur?'background:#0d0c13;border:1px solid #26242e;':'background:transparent;border:1px solid transparent;'),
         select: ()=>this.select(i),
+        hasVideo: !!k.yt,
+        availableLabel: T('filmAvailable'),
       };
     });
     const cur = this.keys[current];
     return {
       chapters,
+      curHasVideo: !!cur.yt,
+      curNoVideo: !cur.yt,
+      inProduction: T('inProduction'),
       curNum: this.fmt(current),
       curTitle: T(cur.t),
       curDesc: T(cur.d),

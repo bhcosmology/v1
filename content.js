@@ -131,6 +131,7 @@ window.STRINGS = {
     en:'The problem first, then the framework, then everything wrong with it. Each one assumes you\'ve seen the last.',
   },
   inProduction: { ca:'EN PRODUCCIÓ', es:'EN PRODUCCIÓN', en:'IN PRODUCTION' },
+  filmAvailable: { ca:'Disponible', es:'Disponible', en:'Available' },
   chaptersLabel: { ca:'Vídeos', es:'Vídeos', en:'Films' },
 
   film1Title: { ca:'Presentació', es:'Presentación', en:'Presentation' },
@@ -399,9 +400,9 @@ window.PAGEMETA = {
     en:{ t:'The Black Hole Cosmology — Every black hole may contain a universe',
          d:'A speculative cosmological framework built on ΛCDM and general relativity: every black hole generates an independent temporal domain. Full annexes in Catalan, Spanish and English.' } },
   films: {
-    ca:{ t:'Vídeos — The Black Hole Cosmology', d:'Quatre vídeos, pensats per veure’ls en ordre: el problema, el marc i tot allò que no resol. En producció.' },
-    es:{ t:'Vídeos — The Black Hole Cosmology', d:'Cuatro vídeos, pensados para verlos en orden: el problema, el marco y todo lo que no resuelve. En producción.' },
-    en:{ t:'Films — The Black Hole Cosmology', d:'Four films, meant to be watched in order: the problem, the framework, and everything it fails to solve. In production.' } },
+    ca:{ t:'Vídeos — The Black Hole Cosmology', d:'Quatre vídeos, pensats per veure’ls en ordre: el problema, el marc i tot allò que no resol. El tercer ja es pot veure; la resta, en producció.' },
+    es:{ t:'Vídeos — The Black Hole Cosmology', d:'Cuatro vídeos, pensados para verlos en orden: el problema, el marco y todo lo que no resuelve. El tercero ya se puede ver; el resto, en producción.' },
+    en:{ t:'Films — The Black Hole Cosmology', d:'Four films, meant to be watched in order: the problem, the framework, and everything it fails to solve. The third is out now; the rest are in production.' } },
   docs: {
     ca:{ t:'Els annexos — The Black Hole Cosmology', d:'Els dos annexos teòrics complets i un resum del marc: 45 seccions, 67 equacions i la derivació entròpica de la constant cosmològica. En català, castellà i anglès.' },
     es:{ t:'Los anexos — The Black Hole Cosmology', d:'Los dos anexos teóricos completos y un resumen del marco: 45 secciones, 67 ecuaciones y la derivación entrópica de la constante cosmológica. En catalán, castellano e inglés.' },
